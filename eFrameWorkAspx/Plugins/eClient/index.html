@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>客户端验证</title>
+</head>
+<style>
+td,input,body,a{font-size:12px;}
+.edit{border:1px solid #ccc;height:23px;line-height:20px;padding-left:3px;}
+#tbb td{height:22px;padding:4px 0px 4px 10px;}
+.spantip{color:#666;}
+</style>
+<script src="../../Scripts/jquery-1.8.3.js"></script>
+<script src="eClient.js"></script>
+<script src="../../Plugins/eCalendar/eCalendar.js"></script>
+<script>
+function check(frm)
+{
+	alert("最后检测!");
+	return false;
+};
+</script>
+<body>
+<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="tbmain">
+  <tr valign="top">
+    <td class="lmenu">&nbsp;</td>
+    <td class="tdbody">
+	<form id="form1" name="form1" method="post" action="" onSubmit="return check(this);" >
+	<table width="95%" border="0" cellpadding="0" cellspacing="1" bgcolor="#D9D9D9" id="tbb">
+
+  <tr>
+    <td width="120" height="21" bgcolor="#F7F7F7"><font color="#ff0000">*</font> 字符串(长度:2-5)</td>
+    <td  bgcolor="#FFFFFF"><input type="text" name="f1" class="edit" fieldname="字符串2-5" notnull="true" datatype="string" maxlength="5" minlength="2" autocomplete="off" value="aa" />
+    <span class="spantip">如：abc</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7"><font color="#ff0000">*</font> 整型5-10</td>
+    <td bgcolor="#FFFFFF"><input type="text" name="f2" class="edit" fieldname="整型5-10" notnull="true" datatype="int" minvalue="5" maxvalue="10" autocomplete="off" value="5" />
+	<span class="spantip">如：6</span>
+	</td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7"><font color="#ff0000">*</font> 小数1.1-9.9</td>
+    <td bgcolor="#FFFFFF"><input type="text" name="f3" class="edit" fieldname="小数1.1-9.9" notnull="true" datatype="float" minvalue="1.1" maxvalue="9.9" autocomplete="off" value="2.2" />
+	<span class="spantip">如：5.5</span>
+	</td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7"><font color="#ff0000">*</font> 生效日期</td>
+    <td bgcolor="#FFFFFF"><input type="text" id="f4" name="f4" class="edit" onFocus="this.blur();" onClick="eCalendar.show('yyyy-mm-dd');" fieldname="生效日期" notnull="true" datatype="date" minvalue="2017-3-12" maxvalue="2017-12-20" autocomplete="off" value="2017-8-8" readOnly>
+	<span class="spantip">范围：2017-3-12 至 2017-12-20</span>
+	</td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7"><font color="#ff0000">*</font> 邮编</td>
+    <td bgcolor="#FFFFFF"><input type="text" name="f5" class="edit" fieldname="邮编" notnull="true" datatype="int" maxlength="6" minlength="6" autocomplete="off" value="650000" />
+	<span class="spantip">如：650000</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7"><font color="#ff0000">*</font> 邮箱</td>
+    <td bgcolor="#FFFFFF"><input type="text" name="f6" class="edit" fieldname="邮箱" notnull="true" datatype="email" autocomplete="off" value="abc@qq.com" />
+	<span class="spantip">如：abc@qq.com</span>
+	</td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7"><font color="#ff0000">*</font> 网址</td>
+    <td bgcolor="#FFFFFF"><input type="text" name="f7" class="edit" fieldname="网址" notnull="true" datatype="url" style="width:360px;" autocomplete="off" value="www.eketeam.com" />
+	<span class="spantip">如：http://www.eketeam.com/</span>
+	</td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7"><font color="#ff0000">*</font> 固定电话</td>
+    <td bgcolor="#FFFFFF"><input type="text" name="f8" class="edit" fieldname="固定电话" notnull="true" datatype="tel" style="width:150px;" autocomplete="off" value="08718883088" />
+	<span class="spantip">如：0871-68888888</span>
+	</td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7"><font color="#ff0000">*</font> 手机</td>
+    <td bgcolor="#FFFFFF"><input type="text" name="f9" class="edit" fieldname="手机" notnull="true" datatype="mobile" style="width:150px;" autocomplete="off" value="13708873210" />
+	<span class="spantip">如：13800881305</span>
+	</td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7"><font color="#ff0000">*</font> 身份证号</td>
+    <td bgcolor="#FFFFFF"><input type="text" name="f10" class="edit" fieldname="身份证号" notnull="true" datatype="cert" style="width:150px;" autocomplete="off" value="532128198012053658" />
+	<span class="spantip">如：532128198012053658</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7"><font color="#ff0000">*</font> 姓名(纯中文)</td>
+    <td bgcolor="#FFFFFF"><input type="text" name="f11" class="edit" fieldname="姓名" notnull="true" datatype="cn" style="width:150px;" autocomplete="off" value="东东" />
+	<span class="spantip">如：王先生</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7"><font color="#ff0000">*</font> 用户名(字母数字)</td>
+    <td bgcolor="#FFFFFF"><input type="text" name="f12" class="edit" fieldname="用户名" notnull="true" datatype="en" style="width:150px;" autocomplete="off" value="tuodong" />
+	<span class="spantip">如：abcd</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7"><font color="#ff0000">*</font> IP地址</td>
+    <td bgcolor="#FFFFFF"><input type="text" name="f12" class="edit" fieldname="IP地址" notnull="true" datatype="ip" style="width:150px;" autocomplete="off" value="192.168.1.1" />
+	<span class="spantip">如：192.168.0.123</span></td>
+  </tr>
+  <tr>
+    <td bgcolor="#F7F7F7">&nbsp;</td>
+    <td bgcolor="#FFFFFF"><input type="submit" name="Submit" value=" 提交 " />
+	<a class="button" href="javascript:;" onClick="if(form1.onsubmit()!=false){form1.submit();}"><span>保存</span></a>
+	</td>
+  </tr>
+  
+</table></form>
+	</td>
+  </tr>
+</table>
+
+</body>
+</html>

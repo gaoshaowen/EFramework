@@ -1,0 +1,6 @@
+﻿.eTab{border:1px solid #cccccc;}
+.eTab > dt{padding:0px;height:27px;overflow:hidden; background:url(images/background.jpg)  repeat-x left top;}
+.eTab > dt a{ display:inline-block;text-align:center;cursor:pointer;font-weight:bold;font-family: "宋体"; font-size:12px;border-right:1px solid #DEDEDE;padding:0px 25px 0px 25px;height:27px;line-height:27px;text-decoration:none;float:left;
+color:#666666;background:url(images/background.jpg) repeat-x left -27px;}
+.eTab > dt a.cur{color:#739242;background:url(images/background.jpg) repeat-x left -54px;}
+.eTab > dd{clear:both;margin:0px; background-color:#ffffff;padding:8px;}

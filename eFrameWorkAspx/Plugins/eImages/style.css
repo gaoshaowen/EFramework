@@ -1,0 +1,46 @@
+﻿.efiles-body {border:0px solid #000;wid3th:800px; hei3ght:600px;display:inline-block;
+ -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+}
+.efiles-body div,.efiles-body a,.efiles-body .file
+{
+width:120px;height:90px;
+}
+.efiles-body div,.efiles-body a
+{
+	position:relative;
+	float:left;
+	margin: 3px 6px 3px 0px;
+	border: 1px solid #ccc;	
+}
+.efiles-body div
+{
+	cursorbak: move;
+	cursor:pointer;
+	background-repeat:no-repeat;
+	background-position:center center;	
+	backg4round-size:100% 100%;
+
+
+}
+.efiles-body div img
+{
+	display:none;
+	position:absolute;
+	width: 16px;
+    height: 16px;
+	top:5px;
+	right:5px;
+	cursor:pointer;
+	background:url(images/del.png) no-repeat left top;
+}
+.efiles-body a{
+display:inline-block; background:url(images/add.gif) no-repeat center center;
+text-decoration:none;font-size:1px;
+}
+.efiles-body .file{
+border:0px solid #ff0000;
+filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity: 0; opacity: 0;  
+}

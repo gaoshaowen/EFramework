@@ -1,0 +1,37 @@
+﻿@charset "utf-8";
+@import url(../Plugins/eLayout/manage/style.css); /* 布局 */
+@import url(../Plugins/eButton/default/style.css);  /* 按钮 */
+@import url(../Plugins/ePanel/default/style.css); /* 面板 */
+@import url(../Plugins/ePager/default/style.css); /* 分页 */
+@import url(../Plugins/eDataView/default/style.css); /* 查看表格 */
+@import url(../Plugins/eDataTable/gray/style.css); /* 列表 */
+@import url(../Plugins/eColumnMenu/default/style.css); /* 列表菜单 */
+@import url(../Plugins/eForm/default/style.css);/*表单*/
+@import url(../Plugins/eLink/default/style.css);/*连接样式*/
+@import url(../Plugins/eSearchItem/default/style.css);/*搜索样式*/
+@import url(../Plugins/eTab/tab/style.css);  /* 选项卡 */
+@import url(../Plugins/eTree/default/style.css);/*目录树*/
+
+body{font-size:12px;line-height:20px;}
+.powerico{border:0px solid #cccccc;margin-left:3px;}
+.powerico a{display:block;padding-left:18px; color:#0099FF;line-height:25px;}
+.powerico a.close{background:transparent url(../images/close.gif) no-repeat 3px center;}
+.powerico a.open{background:transparent url(../images/open.gif) no-repeat 3px center;}
+.powerContent div{margin-left:20px;}
+
+span.rolename{display:inline-block;wid3th:120px;border:0px solid #000;margin-right:20px;}
+span.rolename label{display:inline-block;padding-left:2px;}
+.powerModel span.modelname{display:inline-block;width:180px;line-height:24px;border:0px solid #000;}
+.powerModel span.cond{display:inline-block;width:220px;border:0px solid #000;}
+.powerModel span.poweritem{display:inline-block;width:60px;line-height:24px;}
+.powerModel span.powercheckupitem{display:inline-block;margin-right:14px;wi3dth:100px;line-height:24px;}
+
+
+.tips {
+  background: #fffce7 url("images/tips.png") no-repeat 8px 8px;
+  border: 1px dashed #f8cc7e;
+  padding: 5px 0 5px 26px;
+  color:#333;
+  font-size:12px;
+}
+

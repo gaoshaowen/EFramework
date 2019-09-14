@@ -1,0 +1,13 @@
+@charset "utf-8";
+@import url(../Plugins/eLayout/default/style.css); /* 布局 */
+@import url(../Plugins/eButton/default/style.css);  /* 按钮 */
+@import url(../Plugins/ePanel/default/style.css); /* 面板 */
+@import url(../Plugins/ePager/default/style.css); /* 分页 */
+@import url(../Plugins/eDataView/default/style.css); /* 查看表格 */
+@import url(../Plugins/eDataTable/default/style.css); /* 列表 */
+@import url(../Plugins/eColumnMenu/default/style.css); /* 列表菜单 */
+@import url(../Plugins/eForm/default/style.css);/*表单*/
+@import url(../Plugins/eSearchItem/default/style.css);/*搜索样式*/
+@import url(../Plugins/eMenu/default/style.css);/*导航菜单*/
+body{font-size:12px;}
+h1{font-size:16px;}

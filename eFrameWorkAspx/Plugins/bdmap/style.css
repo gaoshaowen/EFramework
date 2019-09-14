@@ -1,0 +1,4 @@
+
+.bdmapico{border:0px solid #ff0000;display:inline-block;width:15px;height:20px;background:url("images/ico.png") center center no-repeat;background-size:15px 20px; vertical-align:middle;margin-right:6px;}
+.bdmap,.bdmapedit{display:inline-block;height:21px;padding-right:25px;}
+.bdmapedit{ background:url("images/edit.gif") right center no-repeat;backg4round-size:14px 14px; cursor:pointer;}

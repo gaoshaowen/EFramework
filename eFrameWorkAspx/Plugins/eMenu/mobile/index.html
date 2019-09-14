@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>jquery滑动导航插件</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="../../../Scripts/jquery-1.8.3.js"></script>
+		<script type="text/javascript" src="js/jquery-sliding-menu.js"></script>
+<script type="text/javascript">
+var _menu;
+$(document).ready(function()
+{
+	_menu=$('#menu').menu();
+	_menu.hide();
+});
+function opena()
+{
+
+//alert(_menu.is(':hidden'));
+//_menu.toggle();
+//return;
+ if(_menu.is(':hidden'))
+ {
+　　_menu.show();　
+ }
+ else
+ {
+　　_menu.hide();
+ }
+}
+</script>		
+	</head>
+	<body>
+		
+
+			<h2>Demo</h2>
+			<button onClick="opena();">打开</button>
+			<div id="menu" style="display: none; ">
+				<ul>
+					<li>
+						<a href="#">文章</a>
+						<ul>
+							<li>
+								<a href="#">Aerosmith</a>
+								<ul>
+									<li>
+										<a href="#">Get Your Wings</a>
+										<ul>
+											<li>
+												<a href="#">Train Kept A-Rollin'</a>
+											</li>
+											<li>
+												<a href="#">Same Old Song and Dance</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Eagles</a>
+								<ul>
+									<li>
+										<a href="#">Hotel California</a>
+										<ul>
+											<li>
+												<a href="#">Hotel California</a>
+											</li>
+											<li>
+												<a href="#">Pretty Maids All in a Row</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Led Zeppelin</a>
+								<ul>
+									<li>
+										<a href="#">Physical Graffiti</a>
+										<ul>
+											<li>
+												<a href="#">In My Time of Dying</a>
+											</li>
+											<li>
+												<a href="#">Houses of the Holy</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Albums</a>
+						<ul>
+							<li>
+								<a href="#">Get Your Wings</a>
+								<ul>
+									<li>
+										<a href="#">Train Kept A-Rollin'</a>
+									</li>
+									<li>
+										<a href="#">Same Old Song and Dance</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Hotel California</a>
+								<ul>
+									<li>
+										<a href="#">Hotel California</a>
+									</li>
+									<li>
+										<a href="#">Pretty Maids All in a Row</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Physical Graffiti</a>
+								<ul>
+									<li>
+										<a href="#">In My Time of Dying</a>
+									</li>
+									<li>
+										<a href="#">Houses of the Holy</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Songs</a>
+						<ul>
+							<li>
+								<a href="#">In My Time of Dying</a>
+							</li>
+							<li>
+								<a href="#">Houses of the Holy</a>
+							</li>
+							<li>
+								<a href="#">Hotel California</a>
+							</li>
+							<li>
+								<a href="#">Pretty Maids All in a Row</a>
+							</li>
+							<li>
+								<a href="#">Train Kept A-Rollin'</a>
+							</li>
+							<li>
+								<a href="#">Same Old Song and Dance</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Genres</a>
+						<ul>
+							<li>
+								<a href="#">Rock</a>
+								<ul>
+									<li>
+										<a href="#">Hotel California</a>
+									</li>
+									<li>
+										<a href="#">Pretty Maids All in a Row</a>
+									</li>
+									<li>
+										<a href="#">Train Kept A-Rollin'</a>
+									</li>
+									<li>
+										<a href="#">Same Old Song and Dance</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#">Hard rock</a>
+								<ul>
+									<li>
+										<a href="#">In My Time of Dying</a>
+									</li>
+									<li>
+										<a href="#">Houses of the Holy</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Settings</a>
+						<ul>
+							<li>
+								<a href="#">Profile</a>
+							</li>
+							<li>
+								<a href="#">Player</a>
+								<ul>
+									<li>
+										<a href="#">Volume</a>
+									</li>
+									<li>
+										<a href="#">Equalizer</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+
+	</body>
+</html>

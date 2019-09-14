@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;" />
+	<meta http-equiv="X-UA-Compatible" content="edge" /><!--标准模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+	<meta name="renderer" content="webkit"><!--极速模式-->
+	<meta name="renderer" content="webkit|ie-comp|ie-stand"> <!--极速模式，兼容模式，IE模式打开-->
+<title>无标题文档</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+
+</head>
+<script src="../../Scripts/jquery-1.8.3.js?beacon=7"></script>
+<script src="../eImages/ajaxfileupload.js?beacon=7"></script>
+<script src="eFileList.js?beacon=7"></script>
+<body>
+<div class="efilelist">
+<input type="hidden" name="m1_f2" id="m1_f2" value="" />
+<ol>
+<li><a href="中国.pdf" target="_blank">中国</a><a href="javascript:;" class="del" onclick="eFileList_del(this);">&nbsp;</a></li>
+<li><a href="外国.pdf" target="_blank">外国</a><a href="javascript:;" class="del" onclick="eFileList_del(this);">&nbsp;</a></li>
+</ol>
+<a href="javascript:;" class="upload"><input type="file" id="a_file" name="a_file"  vpath="../../" onchange="eFileList_upload(this);" multiple /></a>
+</div>
+</body>
+</html>

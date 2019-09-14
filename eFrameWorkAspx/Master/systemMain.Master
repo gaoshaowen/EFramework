@@ -1,0 +1,32 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="systemMain.master.cs" Inherits="eFrameWork.Master.systemMain" %>
+<%@ Register Src="systemMenu.ascx" TagName="Menu" TagPrefix="uc1" %><!DOCTYPE html>
+<html>
+<head>
+    <title><asp:Literal ID="LitTitle" runat="server" /></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=9;IE=8;IE=7;" />
+	<meta http-equiv="X-UA-Compatible" content="edge" /><!--标准模式-->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">	
+	<meta name="renderer" content="webkit"><!--极速模式-->
+	<meta name="renderer" content="webkit|ie-comp|ie-stand"> <!--极速模式，兼容模式，IE模式打开-->
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<script>var ModelID = "<%=ModelID%>";</script>
+<script src="../Scripts/Init.js?beacon=7"></script>
+<asp:Literal ID="LitJavascript" runat="server" />
+<body>
+ <table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" class="eLayout">
+<colgroup>
+ <col width="210" />
+ <col />
+ </colgroup>
+ <tr>
+    <td height="66"  colspan="2" class="header">&nbsp;&nbsp;<%= EKETEAM.FrameWork.eConfig.getString("systemName") %><div style="float:right;margin-right:10px;height:66px; overflow:hidden;"><a href="ModifyPass.aspx" class="buttonv3" style="margin-top:26px;"><span>修改密码</span></a><a href="LoginOut.aspx" class="buttonv3 cur" style="margin-left:10px;margin-top:26px;" onclick="javascript:return confirm('确认退出登录吗？');"><span>退出登录</span></a></div></td>
+   </tr>
+  <tr valign="top">
+    <td width="210" class="left"><uc1:Menu ID="Menu1" runat="server" /></td>
+    <td class="right"><asp:contentplaceholder id="ContentPlaceHolder1" runat="server" /></td>
+  </tr>
+</table>
+</body>
+</html>

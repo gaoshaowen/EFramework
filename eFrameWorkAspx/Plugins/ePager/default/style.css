@@ -1,0 +1,18 @@
+﻿.epager{height:40px;max-height:40px; overflow:hidden;}
+.epager table{width:auto;}
+.epager td{font-size:12px;font-family:"宋体";line-height:22px;}
+.epager a,.epager span{padding:2px 11px 2px 12px;margin-left:8px;display:inline-block;border:1px solid #DEDFDE; text-decoration:none;}
+.epager span{color:#cccccc;background-color:#f2f2f2;}
+.epager a{color:#333333;}
+.epager a.cur,.epager a:hover{color:#ffffff;border:1px solid #444444;background-color:#0099FF;}
+.epager a.c5ur{background-color:#E87F00;}
+.epager .page{border:1px solid #cccccc;width:36px;height:22px;font-size:12px;text-align:center;}
+.epager .skip{border:0px;width:46px;height:23px;background:url(../images/btn_skip.gif);cursor:pointer;vertical-align:middle;}
+
+
+.epager span.mbtn{display:inline-block; width:18%;text-align:center;padding:0px;border:0px;height: 39px; line-height: 39px; font-size: 18px; color: #222222;background-color: #FFFFFF;}
+.epager a.mbtn{display:inline-block; width:36%; text-align:center;padding:0px;border:0px;height: 39px; line-height: 39px; font-size: 18px; color: #fff; border-radius:2px;background-color: #0caffe;}
+.epager a.mbtn:hover{border:0px;padding:0px;background-color: #0caffe;}
+.epager a.none,.epager a.none:hover{background-color: #f2f2f2;color:#cccccc;}
+
+.epager select{height:25px;}

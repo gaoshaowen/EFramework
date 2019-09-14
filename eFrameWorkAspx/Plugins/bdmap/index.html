@@ -1,0 +1,92 @@
+﻿<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>百度地图</title>
+ <link rel="stylesheet" type="text/css" href="../../Plugins/eButton/default/style.css"/>
+<script type="text/javascript" src="../../Scripts/jquery-1.8.3.js?beacon=7"></script>	
+<script type="text/javascript" src="../../Scripts/eketeam.js?beacon=7"></script>	
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=67jMQ5DmYTe1TLMBKFUTcZAR"></script>	
+</head>
+<script>
+String.prototype.getquerystring = function(name){var reg = new RegExp("(^|&|\\?)"+ name +"=([^&]*)(&|$)","i"),r; if (r=this.match(reg)){return r[2]; }return null; };
+var parid=document.location.href.getquerystring("id");
+var parobj=parent.document.getElementById(parid);
+var spanobj=parent.document.getElementById("span_" + parid);
+var map, geocoder;
+var lng='116.472289';
+var lat='39.902934';
+var zoom= '11';
+
+if(parobj.value.length>0)
+{
+
+	var json=parobj.value.toJson();	
+	lng=json.lng;
+	lat=json.lat;
+	zoom=json.zoom;
+}
+
+function HtmlEncode(str)
+{
+	if(str.length == 0) return "";
+	 var s = str.replace(/&/g,"&amp;");
+	 s = s.replace(/</g,"&lt;");
+     s = s.replace(/>/g,"&gt;");
+     s = s.replace(/ /g,"&nbsp;");
+     s = s.replace(/\'/g,"&#39;");
+     s = s.replace(/\"/g,"&quot;");
+     return s;  
+};
+function initialize() 
+{
+    map = new BMap.Map("map_canvas");
+    var point = new BMap.Point(parseFloat(lng), parseFloat(lat));
+    map.centerAndZoom(point,parseInt(zoom));
+    map.addControl(new BMap.NavigationControl());
+    map.enableScrollWheelZoom();
+    
+    var gc = new BMap.Geocoder();
+    gc.getLocation(point, function(rs){
+        var addComp = rs.addressComponents;
+        var address = [addComp.city].join('');
+		//parent.document.getElementById("kindeditor_plugin_map_address").value = address;
+	});
+};
+
+/*
+$(document).ready(function() {
+	var mapdiv=$("#map_canvas");
+	var left= parseInt((mapdiv.width() - $("#bdico").width()) / 2);
+	var top= parseInt(mapdiv.height() / 2 - $("#bdico").height());
+	//$("#bdico").css("top",top + "px");
+	//$("#bdico").css("left",left + "px");
+	$("#bdico").show();
+});
+*/
+
+function finsh()
+{
+	var centerObj = map.getCenter();
+	var json='{"lng":"' + centerObj.lng + '","lat":"' + centerObj.lat + '","zoom":"' + map.getZoom() + '"}';
+	parobj.value=json;
+	spanobj.innerHTML="经度:" + centerObj.lng + "&nbsp;纬度:" + centerObj.lat + "&nbsp;缩放:" + map.getZoom();
+	parent.layer.close(parent.arrLayerIndex.pop());
+};
+</script>
+<body onLoad="initialize();">
+<div style="margin:10px; margin-top:0px;border:1px solid #ccc; position:relative;width: 605px; overflow:hidden;">
+<img id="bdico" src="images/ico.png" width="30" style="position:absolute; z-index:3333;top:183px;left:285px;">
+<div style="width: 600px; height:450px; border:2px solid #fff;" id="map_canvas"></div>
+</div>
+
+<div style="text-align:center;padding-top:10px;width: 605px;">
+<a class="button" href="javascript:;" onclick="finsh();"><span>  确 定 </span></a>
+</div>
+</body>
+</html>
+
+
+
+
+
+

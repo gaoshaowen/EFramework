@@ -1,0 +1,18 @@
+﻿.esearchitem{display:inline-block;border:1px solid #e8e8e8;font-size:12px;margin-bottom:6px;text-decoration:none; font-family:"宋体";}
+.esearchitem span{display:inline-block;padding:5px 12px 5px 8px;color:#555555; backgr4ound-color:#f3f3f3;}
+.esearchitem i{display:inline-block;border:0px solid #ff0000;width:7px;height:7px;margin-right:6px; background:url("images/close.gif") no-repeat center center;}
+.esearchitem:hover{border:1px solid #FF4400;}
+.esearchitem:hover i{ background:url("images/close_cur.gif") no-repeat center center;}
+
+.quick_clip
+{
+position:absolute;top:30%;left:30%;
+display:inline-block;width:200px;border:5px solid rgba(10,10,10,0.3);pad4ding:5px 10px 5px 10px;border-radius:8px; color:#000000; 
+background:#ffffff url(images/search3.gif) no-repeat right center;padding-right:10px;
+padding-left:10px;
+border-co3lor: transparent;
+letter-spacing:1px;
+background-clip: padding-box;
+min-height:30px;
+line-height:30px;
+}

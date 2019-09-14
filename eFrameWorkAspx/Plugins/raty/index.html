@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+<meta content="width=device-width; initial-scale=1; maximum-scale=1" name="viewport">
+<title>星级评分插件示例</title>
+<link type="text/css" rel="stylesheet" href="appl3ication.css">
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="jquery.raty.min.js"></script>
+</head>
+<body>
+
+
+
+<div id="hint3"></div>
+<input id="hint" type="hidden" />
+
+<div class="raty" data-id="hint"  data-score="1" data-number="5" data-staroff="images/star-off.png" data-starhalf="images/star-half.png" data-staron="images/star-on.png" data-readonly="true" data-half="true" style="border:0px solid #ff0000;"></div>
+
+<input id="hint1" type="hidden" />
+<div class="raty" data-id="hint1" data-score="3" data-number="10" data-staroff="images/cus-off.png" data-starhalf="images/cus-half.png" data-staron="images/cus-on.png" data-half="true" style="border:0px solid #ff0000;"></div>
+
+
+
+
+<input id="hint2" type="hidden" />
+<div class="raty" data-id="hint2" data-score="3" data-number="5" data-staroff="images/cusa-off.png" data-starhalf="images/cusa-half.png" data-staron="images/cusa-on.png" data-half="false" style="border:0px solid #ff0000;"></div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+    $(function() {
+
+     // $.fn.raty.defaults.path = 'img';
+
+ $('.raty').each(function(i,elem){
+ 
+ 	var dataid=$(this).attr('data-id');
+ 	var staroff = $(this).attr('data-staroff');	
+	var starhalf = $(this).attr('data-starhalf');
+	var staron = $(this).attr('data-staron');
+	var _readonly = $(this).attr('data-readonly');
+	var readonly=false;
+	if(_readonly=="true"){readonly=true;}
+	var _half = $(this).attr('data-half');
+	var half=false;
+	if(_half=="true"){half=true;}
+	
+	$(this).raty({ 
+	  width:'100%',
+	  //hints: ['bad', 'poor', 'regular', 'good', 'gorgeous'],
+	  hints: ['','','','',''],
+	  readOnly: readonly, 
+	  targetType: 'number',
+	  targetKeep: true,
+	  half: half,
+	  halfShow: half,
+	  target    : '#' + dataid,
+	  //score: 3 ,
+	  score: function() { return $(this).attr('data-score');},
+	  //number:10,
+	  number: function() {return $(this).attr('data-number'); },
+	 
+	  
+  	  //starOff  : 'star-off.png',,	  
+	  starOff : staroff,
+  	
+	  //starHalf : 'star-half.png',
+	  starHalf  : starhalf,
+	  //starOn   : 'star-on.png',
+	  starOn  : staron,		  
+	  
+	  //size:20,
+	  //click: function(score, evt) {alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt);	 },	 
+	  
+	  });
+
+
+});
+
+
+
+/*
+	  
+	  $('.raty').raty({ 
+	  width:'100%',
+	  readOnly: false, 
+	  targetType: 'number',
+	  targetKeep: true,
+	  half: true,
+	  halfShow: true,		   
+	  //score: 3 ,
+	  score: function() { return $(this).attr('data-score');},
+	  //score: $(this).attr('data-score'), //有问题
+	  //number:10,
+	  number: function() {return $(this).attr('data-number'); },
+	 
+	  target    : '#hint',
+	  
+	   
+	  //starHalf : 'star-half.png',
+  	  //starOff  : 'star-off.png',
+	  //starOff  : $(this).attr('starOff'),	  
+	   starOff: function() {return $(this).attr('starOff'); },
+  	  //starOn   : 'star-on.png',
+	  //starOn  : $(this).attr('starOn'),	  
+	  
+	  //size:20,
+	  //click: function(score, evt) {alert('ID: ' + $(this).attr('id') + "\nscore: " + score + "\nevent: " + evt);	 },	 
+	  
+	  });
+
+*/
+
+
+
+    });
+
+
+
+    
+
+  </script>
+

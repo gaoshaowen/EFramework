@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>newmedia</title>
+<style type="text/css" rel="stylesheet">
+    body {
+    font-size:12px;
+    margin: 0px;
+    background-color:#F0F0EE;
+    overflow: hidden;
+    }
+    td.left1 {
+    font-size:12px;
+    width: 60px;
+    padding: 2px;
+    }
+    td.right1 {
+    font-size:12px;
+    padding: 2px;
+    }
+    td.left2 {
+    font-size:12px;
+    width: 35px;
+    padding: 2px;
+    }
+    td.right2 {
+    font-size:12px;
+    padding: 2px;
+    width: 50px;
+    }
+</style>
+<script type="text/javascript">
+function Request(url,name) 
+{
+	var reg = new RegExp("(^|\\?|&)"+ name +"=([^&]*)(\\s|&|$)", "i");
+	if (reg.test(url))
+		return unescape(RegExp.$2.replace(/\+/g, " "));
+	return "";
+}
+
+var KE = parent.KindEditor;
+location.href.match(/\?id=([\w-]+)/i);
+var id = RegExp.$1;
+var mediaUploadJson = (typeof KE.g[id].imageUploadJson == 'undefined') ? '../media.ashx' : KE.g[id].mediaUploadJson;
+//var path=Request(imageUploadJson,"path");
+KE.event.ready(function() {
+//if(path.length>0){KE.$('uploadForm', document).action = "../media.ashx?path=" + path;}
+KE.$('uploadForm', document).action = mediaUploadJson;
+
+}, window, document);
+    function changeType(obj) {
+        if (obj.value == 1) {
+            document.getElementById('url').style.display = 'none';
+            document.getElementById('flaFile').style.display = 'block';
+        } else {
+            document.getElementById('url').style.display = 'block';
+            document.getElementById('flaFile').style.display = 'none';
+        }
+    }
+function changetype(lb)
+{
+	if(lb==1)
+	{
+        document.getElementById('flaFile').disabled=false;
+		document.getElementById('url').disabled=true;
+	}
+	else
+	{
+		document.getElementById('flaFile').disabled=true;
+		document.getElementById('url').disabled=false;
+	}
+};
+function filechg(obj)
+{
+	var exts=".mp3.swf.flv.f4v.mp4.wav.wma.wmv.mid.avi.mpg.asf.rm.rmvb";
+	var arr=obj.value.toLowerCase().split(".");
+	var ext="." + arr[arr.length-1];
+	if(exts.indexOf(ext) == -1)
+	{
+		alert("文件类型不支持,只支持以下格式\n(mp3|swf|flv|f4v|mp4|wav|wma|wmv|mid|avi|mpg|asf|rm|rmvb)");
+	}
+};
+
+</script>
+</head>
+<body>
+<form id="uploadForm" name="uploadForm" method="post" enctype="multipart/form-data" action="../media.ashx">
+    <input type="hidden" id="editorId" name="id" value="" />
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="left1"><input type="radio" id="type1" name="type" value="1" onClick="changetype(1);" checked /><label for="type1">&nbsp;本地</label>
+          </option>
+                 </td>
+        <td class="right1">
+          <input type="file" id="flaFile" name="flaFile" onchange="filechg(this);" style="width:220px;border:1px solid #cccccc;" /></td>
+      </tr>
+      <tr>
+        <td class="left1"> <input type="radio" id="type2" name="type" value="2" onClick="changetype(2);" /><label for="type2">&nbsp;连接</label></td>
+        <td class="right1"><input type="text" id="url" name="url" value="http://" maxlength="255" style="width:220px;display:none4;border:1px solid #cccccc;" disabled /></td>
+      </tr>
+      <tr>
+        <td class="left1">宽度：</td>
+        <td class="right1">
+          <input type="text" id="flaWidth" name="flaWidth" value="" maxlength="100" style="width:90px;border:1px solid #cccccc;" />        </td>
+      </tr>
+	   <tr>
+        <td class="left1">高度：</td>
+        <td class="right1">
+          <input type="text" id="flaHeight" name="flaHeight" value="" maxlength="100" style="width:90px;border:1px solid #cccccc;" />        </td>
+      </tr>
+    </table>
+</form>
+</body>
+</html>

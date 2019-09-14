@@ -1,0 +1,57 @@
+/*公共*/
+.eDataTable{table-layout:fixed;bo3rder-collapse:collapse;bor3der:solid #CCCCCC;bord3er-width:1px 0px 0px 1px; background-color:#cccccc;}
+.eDataTable h1{margin:0px;padding:0px;overflow:hidden;font-size:1px;}
+.eDataTable td,.eDataTable th{bo3rder:solid #CCCCCC; bord3er-width:0px 1px 1px 0px;font-size:12px;font-family:"宋体";color:#333333;cursor:default; border:1px solid #ffffff;}
+
+.eDataTable td a.btnadd{display:inline-block;width:16px;height:16px;font-size:1px;background: url(images/btn_add.png) no-repeat center center;_background: none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale,src="images/btn_add.png");
+-moz-opacity:0.7;-khtml-opacity: 0.7;opacity: 0.7;filter:alpha(opacity=70);}
+.eDataTable td a.btndel{display:inline-block;width:16px;height:16px;font-size:1px;background: url(images/btn_del.png) no-repeat center center;_background: none;_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale,src="images/btn_del.png");
+-moz-opacity:0.7;-khtml-opacity: 0.7;opacity: 0.7;filter:alpha(opacity=70);}
+.eDataTable td a.btnadd:hover,.eDataTable td a.btndel:hover{-moz-opacity:1;-khtml-opacity: 1;opacity: 1;filter:alpha(opacity=100);}
+
+
+/*表头*/
+.eDataTable thead td,.eDataTable thead th{
+padding-left:6px;height:30px;line-height:30px;color:#555555;font-weight:bold;background-color:#f2f2f2;overflow:hidden;white-space: nowrap;-o-text-overflow:ellipsis;text-overflow:ellipsis;}
+.eDataTable thead div{border:0px solid #ff0000; backgro3und-color:#cccccc; height:100%;
+cursor:default;
+padding-left:5px;
+overflow:hidden;
+white-space: nowrap;
+-o-text-overflow:ellipsis;text-overflow:ellipsis;
+}
+.eDataTable thead td *,.eDataTable thead th * {vertical-align:middle;}
+
+.eDataTable thead h1 {float:right;width:3px;height:auto;line-he3ight:50px;display:block;}
+.eDataTable thead span{display:inline-block;float:right;width:11px;height:100%;margin-right:3px;cursor:default;}
+.eDataTable thead span.orderby_none{background: url(images/none.gif) no-repeat center center;}
+.eDataTable thead span.orderby_cur{background: url(images/pullcur.gif) no-repeat center center;}
+.eDataTable thead span.orderby_desc{background: url(images/pulldesc.gif) no-repeat center center;}
+.eDataTable thead span.orderby_asc{background: url(images/pullasc.gif) no-repeat center center;}
+
+/*内容区*/
+.eDataTable tbody td{padding-left:6px;padding-right:6px; overflow:hidden;text-overflow: ellipsis;-o-text-overflow:ellipsis;white-space: nowrap;cursor:default;line-height:18px;
+padding-top:0px;
+padding-bottom:0px;
+border-bot4tom:1px solid #ff0000;
+}
+.eDataTable tbody td h1{height:3px;}
+.eDataTable tbody td div{overflow:hidden; backg3round-color:#cccccc;cursor:default; white-space:normal;}
+.eDataTable tbody td div span{display: inline-block;height: 100%;vertical-align: middle; backgr4ound-color:#FF0000;}
+.eDataTable tbody td div p{padding:0px;margin:0px;vertical-align: middle;display: inline-block;*display: inline;text-align: left; backgro3und-color:#ff0000;}
+.eDataTable tbody td a{ text-decoration:none;display:inline-block;margin-right:10px;color:#0066CC;} /*操作连接样式*/
+
+/*鼠标移动样式*/
+.eDataTable tbody tr{background-color:#FFFFFF;}
+.eDataTable tbody tr.cur{background-color:#D6F1FF;}
+.eDataTable tbody tr.alternating{background-color:#FAFAFA;}
+.eDataTable tbody tr.cur td,.eDataTable tbody tr.cur a{color:#111111;}
+
+
+/*排序菜单*/
+.sortmenu{position:absolute;top:100px;left:100px;width:100px;background-color:#ffffff;border:1px solid #ccc;box-shadow:0 0 5px rgba(0,0,0,0.2);border-radius:3px;}
+.sortmenu a{color:#333;display:block;height:24px;line-height:26px;padding-left:10px; overflow:hidden; text-decoration:none;font-size:12px;font-family:"宋体";}
+.sortmenu a:hover{background-color:#f1f1f1;}
+
+/*拖宽、高、移动线*/
+.resizeline{ position:absolute;width:1px;height:1px;backgro4und-color:#ff0000;font-size:1px;line-height:1px;overflow:hidden;margin:0;padding:0;background-color:#666666;}

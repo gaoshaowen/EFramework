@@ -1,0 +1,8 @@
+﻿.selInput{position:relative;display:inline-block;border:1px solid #ccc; padding:0px 20px 0px 3px;    background: #ffffff url(images/data.png) no-repeat right top;}
+.selInput input{display:block;border:0px;height:20px;line-height:20px;}
+.selInput input,.selInput li {font-size:12px;color:#222;}
+.selInput ul,.selInput li{list-style:none;margin:0px;padding:0px;}
+.selInput ul{max-height:210px;width:100%; background-color:#FFFFFF; border:1px solid #ccc; overflow:hidden;overflow-y:auto; position:absolute;left:-1px;top:19px;}
+.selInput li{height:21px;line-height:21px;margin:2px;padding-left:6px;padding-right:2px; overflow:hidden; cursor:pointer;}
+.selInput li:hover{ background-color:#f2f2f2;}
+.selInput .text{border:0px;}

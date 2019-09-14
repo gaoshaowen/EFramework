@@ -1,0 +1,16 @@
+.emenu,.emenu li{margin:0px;padding:0px;}
+.emenu li{list-style-type:none;margin-bottom:1px;}
+.emenu a{display:block; font-size:12px;color:#f2f2f2;height:50px;line-height:50px;padding-left:50px;}
+.emenu a.open{ background:url(images/pt_open.gif) no-repeat 190px center; }
+.emenu a.close{ background:url(images/pt_close.gif) no-repeat 190px center; }
+.emenu li:hover{background:url(images/lmenu_hover.jpg) no-repeat left top;}
+.emenu li.cur{background:url(images/lmenu_cur.jpg) no-repeat left top;}
+.emenu li > ul{background-color:#383838;margin-bottom:1px;}
+.emenu li ul{padding-top:1px}
+.emenu li > ul li {margin-left:20px;background:none;background:#383838 url(images/pts.gif) no-repeat 16px 16px;}
+.emenu li > ul li:hover{background:none;background:#596266 url(images/pts.gif) no-repeat 16px 16px;}
+.emenu li > ul li.cur{background:#4A5155 url(images/pts.gif) no-repeat 16px 16px;}
+.emenu li > ul li a{height:40px;line-height:40px;padding-left:32px;}
+.emenu li > ul li a.open{ background:url(images/pt_open.gif) no-repeat 172px center; }
+.emenu li > ul li a.close{ background:url(images/pt_close.gif) no-repeat 175px center; }
+﻿

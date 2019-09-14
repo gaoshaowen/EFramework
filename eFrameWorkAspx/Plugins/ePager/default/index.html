@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页</title>
+</head>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<body>
+<div style="margin:10px;">
+<div class="epager">
+<table border="0" cellspacing="0" cellpadding="0" align="center">
+<form id="frmgopage" name="frmgopage" method="post" action="#modelid=3" onSubmit="return goSearchPage(this);">
+<tr>
+<td align="right">共 <font color="#cc0000">30</font> 条&nbsp;&nbsp;<span>..1</span><span>&lt;&lt;</span><a href="#page=1" title="第1页">1</a><a href="#page=2" title="第2页" class="cur">2</a><a href="#page=3" title="第3页">3</a><span>&gt;&gt;</span><span>..1</span>&nbsp;&nbsp;到第&nbsp;<input type="text" id="page" name="page" class="page" fieldname="页码" notnull="true" datatype="int" minvalue="1" maxvalue="1" value="1" evalue="1" autocomplete="off" />&nbsp;页&nbsp;</td>
+<td width="50" align="left"><input class="skip" type="submit" name="Submit" value="" /></td>
+</tr>
+</form>
+</table>
+
+
+<div>
+<a class="mbtn" href="list.html">上一页</a><span class="mbtn">2/12</span><a class="mbtn" href="#">下一页</a> 
+</div>
+
+</div>
+
+</div>
+
+
+</body>
+</html>

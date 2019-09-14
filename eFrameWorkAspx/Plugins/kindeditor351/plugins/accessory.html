@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Accessory</title>
+<style type="text/css" rel="stylesheet">
+    body {
+    font-size:12px;
+    margin: 0px;
+    background-color:#F0F0EE;
+    overflow: hidden;
+    }
+    td.left1 {
+    font-size:12px;
+    width: 50px;
+    padding: 2px;
+    }
+    td.right1 {
+    font-size:12px;
+    padding: 2px;
+    }
+    td.left2 {
+    font-size:12px;
+    width: 35px;
+    padding: 2px;
+    }
+    td.right2 {
+    font-size:12px;
+    padding: 2px;
+    width: 50px;
+    }
+</style>
+<script type="text/javascript">
+function Request(url,name) 
+{
+	var reg = new RegExp("(^|\\?|&)"+ name +"=([^&]*)(\\s|&|$)", "i");
+	if (reg.test(url))
+		return unescape(RegExp.$2.replace(/\+/g, " "));
+	return "";
+}
+
+var KE = parent.KindEditor;
+location.href.match(/\?id=([\w-]+)/i);
+var id = RegExp.$1;
+var accessoryUploadJson = (typeof KE.g[id].accessoryUploadJson == 'undefined') ? '' : KE.g[id].accessoryUploadJson;
+//var path=Request(imageUploadJson,"path");
+KE.event.ready(function() {
+//if(path.length>0){KE.$('uploadForm', document).action = "../uploadaccessory.ashx?path=" + path;}
+
+KE.$('uploadForm', document).action = accessoryUploadJson;
+
+}, window, document);
+    function changeType(obj) {
+        if (obj.value == 1) {
+            document.getElementById('url').style.display = 'none';
+            document.getElementById('imgFile').style.display = 'block';
+        } else {
+            document.getElementById('url').style.display = 'block';
+            document.getElementById('imgFile').style.display = 'none';
+        }
+    };
+function filechg(obj)
+{
+	var exts=".doc.xls.ppt.pdf.txt.rar.zip";
+	var arr=obj.value.toLowerCase().split(".");
+	var ext="." + arr[arr.length-1];
+	if(exts.indexOf(ext) == -1)
+	{
+		alert("文件类型不支持,只支持以下格式\n(doc|xls|ppt|pdf|txt|rar|zip)");
+	}
+};
+</script>
+</head>
+<body>
+<form id="uploadForm" name="uploadForm" method="post" enctype="multipart/form-data" action="../uploadaccessory.ashx">
+    <input type="hidden" id="editorId" name="id" value="" />
+    <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td class="left1">
+          <select id="type" name="type" onchange="changeType(this);" />             <option value="1" selected="selected">本地</option>
+            <option value="2">远程</option>
+          </select>
+        </td>
+        <td class="right1">
+          <input type="file" id="imgFile" name="imgFile" onchange="filechg(this);" style="width:220px;border:1px solid #cccccc;" />
+          <input type="text" id="url" name="url" value="http://" maxlength="255" style="width:220px;display:none;border:1px solid #cccccc;" />
+        </td>
+      </tr>
+      <tr>
+        <td class="left1">说明：</td>
+        <td class="right1">
+          <input type="text" id="imgTitle" name="imgTitle" value="" maxlength="100" style="width:220px;border:1px solid #cccccc;" />
+        </td>
+      </tr>
+    </table>
+</form>
+</body>
+</html>

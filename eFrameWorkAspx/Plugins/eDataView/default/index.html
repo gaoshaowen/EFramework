@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>eDataView示例</title>
+</head>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link href="../../eForm/default/style.css" rel="stylesheet" type="text/css" />
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="eDataView">
+<colgroup>
+<col width="120" />
+<col />
+</colgroup>
+<tr>
+<td width="120" class="title"><ins>*</ins>类型un：</td>
+<td class="content"><span class="eform"><input type="radio" name="F17" id="F17_1" value="896c78db-4210-4efa-b011-6366b59a3e30" fieldname="类型un" notnull="true" datatype="string"><label for="F17_1">文章</label><input type="radio" name="F17" id="F17_2" value="3be5edc3-bd44-4e60-8ee8-8b5403568394" fieldname="类型un" notnull="true" datatype="string"><label for="F17_2">单页</label><input type="radio" name="F17" id="F17_3" value="6dbfb670-7502-47b9-93d8-2fce389523ab" fieldname="类型un" notnull="true" datatype="string"><label for="F17_3">留言</label><input type="radio" name="F17" id="F17_4" value="152e6e7f-d313-467a-90a9-bfcf9f875493" fieldname="类型un" notnull="true" datatype="string"><label for="F17_4">产品</label><input type="radio" name="F17" id="F17_5" value="6b37e67c-c2f8-4fdb-804a-3ed524605a5a" fieldname="类型un" notnull="true" datatype="string"><label for="F17_5">案例</label><input type="radio" name="F17" id="F17_6" value="9728e336-35d9-43c4-b241-76573044eba9" fieldname="类型un" notnull="true" datatype="string"><label for="F17_6">图片</label></span>
+</td></tr>
+<tr>
+<td class="title"><ins>*</ins>类型char：</td>
+<td class="content"><span class="eform"><input type="checkbox" name="F18" id="F18_1" value="896c78db-4210-4efa-b011-6366b59a3e30" fieldname="类型char" notnull="true" datatype="string" maxlength="500"><label for="F18_1">文章</label><input type="checkbox" name="F18" id="F18_2" value="3be5edc3-bd44-4e60-8ee8-8b5403568394" fieldname="类型char" notnull="true" datatype="string" maxlength="500"><label for="F18_2">单页</label><input type="checkbox" name="F18" id="F18_3" value="6dbfb670-7502-47b9-93d8-2fce389523ab" fieldname="类型char" notnull="true" datatype="string" maxlength="500"><label for="F18_3">留言</label><input type="checkbox" name="F18" id="F18_4" value="152e6e7f-d313-467a-90a9-bfcf9f875493" fieldname="类型char" notnull="true" datatype="string" maxlength="500"><label for="F18_4">产品</label><input type="checkbox" name="F18" id="F18_5" value="6b37e67c-c2f8-4fdb-804a-3ed524605a5a" fieldname="类型char" notnull="true" datatype="string" maxlength="500"><label for="F18_5">案例</label><input type="checkbox" name="F18" id="F18_6" value="9728e336-35d9-43c4-b241-76573044eba9" fieldname="类型char" notnull="true" datatype="string" maxlength="500"><label for="F18_6">图片</label></span>
+</td></tr>
+<tr>
+<td class="title"><ins>*</ins>名称：</td>
+<td class="content"><span class="eform"><input type="text" name="F2" id="F2" class="text" fieldname="名称" notnull="true" datatype="string" maxlength="50" sty4le="border:1px solid #ff0000;width:200px;" value="" autocomplete="off"></span>
+</td></tr>
+<tr>
+<td class="title">密码：</td>
+<td class="content"><span class="eform"><input type="password" name="F10" id="F10" class="text" fieldname="密码" notnull="false" datatype="string" maxlength="50" autocomplete="off"></span>
+</td></tr>
+<tr>
+<td class="title">性别char：</td>
+<td class="content"><span class="eform"><input type="radio" name="F11" id="F11_1" value="男" fieldname="性别char" notnull="false" datatype="string" maxlength="50"><label for="F11_1">男</label><input type="radio" name="F11" id="F11_2" value="女" checked fieldname="性别char" notnull="false" datatype="string" maxlength="50"><label for="F11_2">女</label></span>
+</td></tr>
+<tr>
+<td class="title">性别bit：</td>
+<td class="content"><span class="eform"><input type="radio" name="F12" id="F12_1" value="True" checked fieldname="性别bit" notnull="false" datatype="string"><label for="F12_1">男</label><input type="radio" name="F12" id="F12_2" value="False" fieldname="性别bit" notnull="false" datatype="string"><label for="F12_2">女</label></span>
+</td></tr>
+<tr>
+<td class="title">性别int：</td>
+<td class="content"><span class="eform"><input type="radio" name="F13" id="F13_1" value="1" fieldname="性别int" notnull="false" datatype="string"><label for="F13_1">男</label><input type="radio" name="F13" id="F13_2" value="0" checked fieldname="性别int" notnull="false" datatype="string"><label for="F13_2">女</label></span>
+</td></tr>
+<tr>
+<td class="title">出生日期：</td>
+<td class="content"><span class="eform"><input type="text" name="F14" id="F14" class="text date" fieldname="出生日期" notnull="false" datatype="string" onClick="setDayHM(this);" onFocus="this.blur();" readOnly></span>
+</td></tr>
+<tr>
+<td class="title">图片：</td>
+<td class="content"><span class="eform"><input type="hidden" name="F15" id="F15" fieldname="图片" notnull="false" datatype="string" maxlength="50" ></span>
+</td></tr>
+<tr>
+<td class="title">金额：</td>
+<td class="content"><span class="eform"><input type="text" name="F16" id="F16" class="text" fieldname="金额" notnull="false" datatype="string" value="1" autocomplete="off"><i>万元</i></span>
+</td></tr>
+<tr>
+<td class="title">内容：</td>
+<td class="content"><span class="eform"><textarea  name="F19" id="F19" class="edit" fieldname="内容" notnull="false" datatype="string">
+</textarea>
+</span>
+</td></tr>
+<tr>
+<td class="title">不编辑：</td>
+<td class="content"><span class="eform">工工工工</span>
+</td></tr>
+<tr>
+<td colspan="2" class="title" style="text-align:left;padding-left:125px;"><a class="button" href="javascript:;" onClick="if(frmaddoredit.onsubmit()!=false){frmaddoredit.submit();}"><span>保存</span></a><a class="button" href="javascript:;" style="margin-left:30px;" onClick="history.back();"><span>返回</span></a></td>
+</tr>
+</table>
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_687503'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s5.cnzz.com/stat.php%3Fid%3D687503%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
+</body>
+</html>

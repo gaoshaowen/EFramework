@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>eDataTable示例</title>
+</head>
+<script src="../../../Scripts/eketeam.js"></script>
+<script src="../eDataTable.js"></script>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<style>
+body{font-size:12px;wid4th:5000px;}
+</style>
+<body>
+<table width="900" class="eDataTable" id="eDataTable" cellpadding="0" cellspacing="0">
+<colgroup>
+<col width="90" />
+<col width="100" />
+<col width="200" />
+<col />
+<col width="120" />
+</colgroup>
+<thead>
+  <tr>
+    <th width="90">序号</th>
+    <th width="200" eCellID="71" eOrderByName="o9" eOrderByValue="1" eSize="true" eMove="true">用户名</th>
+    <th eCellID="72" eSize="true" eMove="true">IMG</th>
+    <th eCellID="72" eSize="true" eMove="true">地址</th>
+	<th width="150">管理</th>
+  </tr>
+  </thead>
+  <tbody eSize="true" eMove="true">
+   <tr eclass="">
+    <td height="40">1</td>
+    <td>tuodong</td>
+    <td><div style="height:40px; background:url('http://localhost/ekeframev6/upload/2017/07/201707092239123529.jpeg')  no-repeat left top;"></div></td>
+    <td><div style="height:40px;"><span></span><p>云南省昆明市云南省昆明市云南省昆明市云南省昆明市云南省昆明市云南省昆明市</p></div></td>
+  	<td><a href="#">查看</a><a href="#">修改</a><a href="#" onClick="javascript:return confirm('确认要删除吗？');">删除</a></td>
+  </tr>
+  <tr class="alternating" eclass="alternating">
+    <td height="40">2</td>
+    <td>admin</td>
+    <td>&nbsp;</td>
+    <td><div style="height:40px;"><span></span><p><img src="http://localhost/ekeframev6/upload/2017/07/201707092239123529.jpeg"></p></div></td>
+	<td><a href="#">查看</a><a href="#">修改</a><a href="#" onClick="javascript:return confirm('确认要删除吗？');">删除</a></td>
+  </tr>
+   <tr eclass="">
+    <td height="40">3</td>
+    <td>administrator</td>
+    <td>&nbsp;</td>
+    <td><div style="height:40px;"><span></span><p>云南省昆明市</p></div></td>
+	<td><a href="#">查看</a><a href="#">修改</a><a href="#" onClick="javascript:return confirm('确认要删除吗？');">删除</a></td>
+  </tr>
+    <tr class="alternating" eclass="alternating">
+    <td height="40">4</td>
+    <td>love16880</td>
+    <td>&nbsp;</td>
+    <td><div style="height:40px;"><span></span><p>云南省昆明市</p></div></td>
+	<td><a href="#">查看</a><a href="#">修改</a><a href="#" onClick="javascript:return confirm('确认要删除吗？');">删除</a></td>
+  </tr>
+   <tr eclass="">
+    <td height="40">5</td>
+    <td st4yle="cursor:move;">tuodongdong</td>
+    <td>&nbsp;</td>
+    <td><div style="height:40px;"><span></span><p>云南省昆明市</p></div></td>
+	<td><a href="#">查看</a><a href="#">修改</a><a href="#" onClick="javascript:return confirm('确认要删除吗？');">删除</a></td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+<script>
+function init()
+{	
+
+	var eTable= new eDataTable("eDataTable"); // new eDataTable("eDataTable",1);
+	eTable.rowover=function(tr){tr.className="cur";};
+	eTable.rowout=function(tr){tr.className=tr.getAttribute("eclass");};
+	eTable.setWidth=function(td,width)
+	{
+		document.title= "setWidth::" + width;
+	};
+	eTable.setHeight=function(td,height)
+	{
+		document.title="setHeight::" + height;
+	};
+	eTable.onclick=function(tr)
+	{
+		//outText(tr.innerText.replace(/\s/g,"").substring(0,1) );
+		//alert(tr);
+	};
+	eTable.moveRow=function(index,new_index)
+	{
+		document.title="moveRow::" +  index + "::" + new_index;
+	};
+	eTable.moveColumn=function(index,new_index)
+	{
+		document.title="moveColumn::" +  index + "::" + new_index;
+	};
+
+};
+
+if(window.addEventListener){window.addEventListener("load",init, false);}else{window.attachEvent("onload",init);}
+</script>
+
+
+</body>
+</html>

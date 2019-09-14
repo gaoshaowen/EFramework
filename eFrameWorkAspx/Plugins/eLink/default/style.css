@@ -1,0 +1,3 @@
+﻿a.elink,a.elinkcur{display:inline-block;border:1px solid #D4D4D4;font-family:"宋体";font-size:12px;text-decoration:none;color:#333333;height:25px;line-height:26px;padding:0px 20px 0px 20px;margin-right:8px;
+background-image:url("images/bg.jpg");background-repeat:no-repeat;background-position:right -7px;}
+a.elinkcur,a.elink:hover{border:1px solid #FF5353;color:#FF5353;background-position:right -39px;}

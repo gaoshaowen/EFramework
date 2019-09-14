@@ -1,0 +1,1503 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{745E71EB-85F8-4ACC-902E-AB9EEF25EE90}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>eFrameWork</RootNamespace>
+    <AssemblyName>eFrameWorkAspx</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EKETEAM, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\EKETEAM.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="eWebService.asmx" />
+    <Content Include="Examples\Default.aspx" />
+    <Content Include="Examples\easyUIDataGrid.aspx" />
+    <Content Include="Examples\easyUIDataGridSearch.aspx" />
+    <Content Include="Examples\eClient.aspx" />
+    <Content Include="Examples\eDataContent.aspx" />
+    <Content Include="Examples\eDataTable.aspx" />
+    <Content Include="Examples\eDataView.aspx" />
+    <Content Include="Examples\eForm.aspx" />
+    <Content Include="Examples\eFormControl.aspx" />
+    <Content Include="Examples\eJson.aspx" />
+    <Content Include="Examples\eList.aspx" />
+    <Content Include="Examples\eListControl.aspx" />
+    <Content Include="Examples\eOleDB.aspx" />
+    <Content Include="Examples\eOrderby.aspx" />
+    <Content Include="Examples\ePicture.aspx" />
+    <Content Include="Examples\eSearchControl.aspx" />
+    <Content Include="Examples\eTable.aspx" />
+    <Content Include="Examples\eUser.aspx" />
+    <Content Include="Examples\images\pic.bmp" />
+    <Content Include="Examples\images\pic.jpg" />
+    <Content Include="Examples\LoadAction.aspx" />
+    <Content Include="Examples\Menu.ascx" />
+    <Content Include="Examples\Multiple.aspx" />
+    <Content Include="Examples\style.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\close.gif" />
+    <Content Include="Images\development.jpg" />
+    <Content Include="Images\ico\bmp.gif" />
+    <Content Include="Images\ico\cab.gif" />
+    <Content Include="Images\ico\chm.gif" />
+    <Content Include="Images\ico\csv.gif" />
+    <Content Include="Images\ico\doc.gif" />
+    <Content Include="Images\ico\dot.gif" />
+    <Content Include="Images\ico\gif.gif" />
+    <Content Include="Images\ico\hlp.gif" />
+    <Content Include="Images\ico\jpeg.gif" />
+    <Content Include="Images\ico\jpg.gif" />
+    <Content Include="Images\ico\mbk.gif" />
+    <Content Include="Images\ico\mdb.gif" />
+    <Content Include="Images\ico\mid.gif" />
+    <Content Include="Images\ico\pdf.gif" />
+    <Content Include="Images\ico\pic.gif" />
+    <Content Include="Images\ico\png.gif" />
+    <Content Include="Images\ico\ppt.gif" />
+    <Content Include="Images\ico\psd.gif" />
+    <Content Include="Images\ico\rar.gif" />
+    <Content Include="Images\ico\rm.gif" />
+    <Content Include="Images\ico\rtf.gif" />
+    <Content Include="Images\ico\swf.gif" />
+    <Content Include="Images\ico\tif.gif" />
+    <Content Include="Images\ico\txt.gif" />
+    <Content Include="Images\ico\unknown.gif" />
+    <Content Include="Images\ico\wma.gif" />
+    <Content Include="Images\ico\xls.gif" />
+    <Content Include="Images\ico\xml.gif" />
+    <Content Include="Images\ico\zip.gif" />
+    <Content Include="Images\none.gif" />
+    <Content Include="Images\open.gif" />
+    <Content Include="Images\player.swf" />
+    <Content Include="Images\player.xml" />
+    <Content Include="Images\player\adv_skip.png" />
+    <Content Include="Images\player\buffer.swf" />
+    <Content Include="Images\player\buttom_bg.png" />
+    <Content Include="Images\player\close_adv.png" />
+    <Content Include="Images\player\full_on.png" />
+    <Content Include="Images\player\full_out.png" />
+    <Content Include="Images\player\general_on.png" />
+    <Content Include="Images\player\general_out.png" />
+    <Content Include="Images\player\logo.swf" />
+    <Content Include="Images\player\logoc.png" />
+    <Content Include="Images\player\mute_on.png" />
+    <Content Include="Images\player\mute_out.png" />
+    <Content Include="Images\player\pause_on.png" />
+    <Content Include="Images\player\pause_out.png" />
+    <Content Include="Images\player\pause_scgedyke.png" />
+    <Content Include="Images\player\pause_scgedyke_on.png" />
+    <Content Include="Images\player\play_on.png" />
+    <Content Include="Images\player\play_out.png" />
+    <Content Include="Images\player\schedule.png" />
+    <Content Include="Images\player\schedule_bg.png" />
+    <Content Include="Images\player\schedule_load.png" />
+    <Content Include="Images\player\schedule_play.png" />
+    <Content Include="Images\player\sound_on.png" />
+    <Content Include="Images\player\sound_out.png" />
+    <Content Include="Images\player\volume_back.png" />
+    <Content Include="Images\player\volume_float.png" />
+    <Content Include="Images\player\volume_on.png" />
+    <Content Include="Images\player\v_off.png" />
+    <Content Include="Images\player\v_on.png" />
+    <Content Include="Images\sw_false.gif" />
+    <Content Include="Images\sw_true.gif" />
+    <Content Include="Images\unknow.gif" />
+    <Content Include="Images\view.jpg" />
+    <Content Include="Manage\AllDomain.aspx" />
+    <Content Include="Manage\Cache.aspx" />
+    <Content Include="Manage\createModel.aspx" />
+    <Content Include="Manage\createTable.aspx" />
+    <Content Include="Manage\DataContents.aspx" />
+    <Content Include="Manage\DataViews.aspx" />
+    <Content Include="Manage\Default.aspx" />
+    <Content Include="Manage\getFrameSQL.aspx" />
+    <Content Include="Manage\images\add.jpg" />
+    <Content Include="Manage\images\del.jpg" />
+    <Content Include="Manage\images\help.gif" />
+    <Content Include="Manage\images\jsonedit.jpg" />
+    <Content Include="Manage\images\left_ico.jpg" />
+    <Content Include="Manage\images\loading.gif" />
+    <Content Include="Manage\images\tips.png" />
+    <Content Include="Manage\javascript\columns.js" />
+    <Content Include="Manage\Login.aspx" />
+    <Content Include="Manage\LoginOut.aspx" />
+    <Content Include="Manage\Menus.aspx" />
+    <Content Include="Manage\ModelExport.aspx" />
+    <Content Include="Manage\ModelImport.aspx" />
+    <Content Include="Manage\ModelItems.aspx" />
+    <Content Include="Manage\ModelItems_Action.aspx" />
+    <Content Include="Manage\ModelItems_Basic.aspx" />
+    <Content Include="Manage\ModelItems_Client.aspx" />
+    <Content Include="Manage\ModelItems_Columns.aspx" />
+    <Content Include="Manage\ModelItems_Data.aspx" />
+    <Content Include="Manage\ModelItems_Export.aspx" />
+    <Content Include="Manage\ModelItems_FillData.aspx" />
+    <Content Include="Manage\ModelItems_Js.aspx" />
+    <Content Include="Manage\ModelItems_Layout.aspx" />
+    <Content Include="Manage\ModelItems_List.aspx" />
+    <Content Include="Manage\ModelItems_Search.aspx" />
+    <Content Include="Manage\ModelItems_WebAPI.aspx" />
+    <Content Include="Manage\Models.aspx" />
+    <Content Include="Manage\Roles.aspx" />
+    <Content Include="Manage\style.css" />
+    <Content Include="Manage\TableInfo.aspx" />
+    <Content Include="Manage\TableInfo_Export.aspx" />
+    <Content Include="Manage\ToKens.aspx" />
+    <Content Include="Manage\Users.aspx" />
+    <Content Include="Master\manageMenu.ascx" />
+    <Content Include="Master\systemMenu.ascx" />
+    <Content Include="Mobile\Default.aspx" />
+    <Content Include="Mobile\images\menu.png" />
+    <Content Include="Mobile\Login.aspx" />
+    <Content Include="Mobile\LoginOut.aspx" />
+    <Content Include="Mobile\Menu.ascx" />
+    <Content Include="Mobile\Model.aspx" />
+    <Content Include="Mobile\ModifyPass.aspx" />
+    <Content Include="Mobile\style.css" />
+    <Content Include="Plugins\bdmap\images\edit.gif" />
+    <Content Include="Plugins\bdmap\images\edit.png" />
+    <Content Include="Plugins\bdmap\images\ico.png" />
+    <Content Include="Plugins\bdmap\index.html" />
+    <Content Include="Plugins\bdmap\style.css" />
+    <Content Include="Plugins\eButton\default\images\button.gif" />
+    <Content Include="Plugins\eButton\default\images\icos.gif" />
+    <Content Include="Plugins\eButton\default\index.html" />
+    <Content Include="Plugins\eButton\default\style.css" />
+    <Content Include="Plugins\eCalendar\eCalendar.js" />
+    <Content Include="Plugins\eCalendar\index.html" />
+    <Content Include="Plugins\eClient\eClient.js" />
+    <Content Include="Plugins\eClient\index.html" />
+    <Content Include="Plugins\eColor\eColor.html" />
+    <Content Include="Plugins\eColor\images\icon.gif" />
+    <Content Include="Plugins\eColor\style.css" />
+    <Content Include="Plugins\eColumnMenu\default\images\tb_menu.gif" />
+    <Content Include="Plugins\eColumnMenu\default\images\write.gif" />
+    <Content Include="Plugins\eColumnMenu\default\style.css" />
+    <Content Include="Plugins\eColumnMenu\eColumnMenu.js" />
+    <Content Include="Plugins\eDataTable\default\images\btn_add.png" />
+    <Content Include="Plugins\eDataTable\default\images\btn_del.png" />
+    <Content Include="Plugins\eDataTable\default\images\loading.gif" />
+    <Content Include="Plugins\eDataTable\default\images\none.gif" />
+    <Content Include="Plugins\eDataTable\default\images\PullAsc.gif" />
+    <Content Include="Plugins\eDataTable\default\images\PullCur.gif" />
+    <Content Include="Plugins\eDataTable\default\images\PullDesc.gif" />
+    <Content Include="Plugins\eDataTable\default\index.html" />
+    <Content Include="Plugins\eDataTable\default\style.css" />
+    <Content Include="Plugins\eDataTable\eDataTable.js" />
+    <Content Include="Plugins\eDataTable\gray\images\btn_add.png" />
+    <Content Include="Plugins\eDataTable\gray\images\btn_del.png" />
+    <Content Include="Plugins\eDataTable\gray\images\none.gif" />
+    <Content Include="Plugins\eDataTable\gray\images\PullAsc.gif" />
+    <Content Include="Plugins\eDataTable\gray\images\PullCur.gif" />
+    <Content Include="Plugins\eDataTable\gray\images\PullDesc.gif" />
+    <Content Include="Plugins\eDataTable\gray\index.html" />
+    <Content Include="Plugins\eDataTable\gray\style.css" />
+    <Content Include="Plugins\eDataView\default\index.html" />
+    <Content Include="Plugins\eDataView\default\style.css" />
+    <Content Include="Plugins\eDataView\miniUI.css" />
+    <Content Include="Plugins\eFileList\eFileList.js" />
+    <Content Include="Plugins\eFileList\images\Add.png" />
+    <Content Include="Plugins\eFileList\images\del.png" />
+    <Content Include="Plugins\eFileList\images\_add.png" />
+    <Content Include="Plugins\eFileList\index.html" />
+    <Content Include="Plugins\eFileList\style.css" />
+    <Content Include="Plugins\eForm\default\images\data.png" />
+    <Content Include="Plugins\eForm\default\images\date.gif" />
+    <Content Include="Plugins\eForm\default\images\search.gif" />
+    <Content Include="Plugins\eForm\default\index.html" />
+    <Content Include="Plugins\eForm\default\style.css" />
+    <Content Include="Plugins\eImages\ajaxfileupload.js" />
+    <Content Include="Plugins\eImages\drag-arrange.js" />
+    <Content Include="Plugins\eImages\images\add.gif" />
+    <Content Include="Plugins\eImages\images\del.png" />
+    <Content Include="Plugins\eImages\style.css" />
+    <Content Include="Plugins\eLayout\default\images\eButton_v3.0.jpg" />
+    <Content Include="Plugins\eLayout\default\images\leftbg.jpg" />
+    <Content Include="Plugins\eLayout\default\images\lmenu_bottom.jpg" />
+    <Content Include="Plugins\eLayout\default\images\lmenu_cur.jpg" />
+    <Content Include="Plugins\eLayout\default\images\lmenu_hover.jpg" />
+    <Content Include="Plugins\eLayout\default\images\top_bg.jpg" />
+    <Content Include="Plugins\eLayout\default\images\top_bg_new.jpg" />
+    <Content Include="Plugins\eLayout\default\index.html" />
+    <Content Include="Plugins\eLayout\default\style.css" />
+    <Content Include="Plugins\eLayout\manage\images\bg.jpg" />
+    <Content Include="Plugins\eLayout\manage\images\lmenu.jpg" />
+    <Content Include="Plugins\eLayout\manage\images\lmenu_cur.jpg" />
+    <Content Include="Plugins\eLayout\manage\index.html" />
+    <Content Include="Plugins\eLayout\manage\style.css" />
+    <Content Include="Plugins\eLink\default\images\bg.jpg" />
+    <Content Include="Plugins\eLink\default\index.html" />
+    <Content Include="Plugins\eLink\default\style.css" />
+    <Content Include="Plugins\eLogin\default\images\btn_login.gif" />
+    <Content Include="Plugins\eLogin\default\images\b_c.gif" />
+    <Content Include="Plugins\eLogin\default\images\b_l.gif" />
+    <Content Include="Plugins\eLogin\default\images\b_r.gif" />
+    <Content Include="Plugins\eLogin\default\images\c_l.gif" />
+    <Content Include="Plugins\eLogin\default\images\c_r.gif" />
+    <Content Include="Plugins\eLogin\default\images\none.gif" />
+    <Content Include="Plugins\eLogin\default\images\title.gif" />
+    <Content Include="Plugins\eLogin\default\images\t_c.gif" />
+    <Content Include="Plugins\eLogin\default\images\t_l.gif" />
+    <Content Include="Plugins\eLogin\default\images\t_r.gif" />
+    <Content Include="Plugins\eLogin\default\index.html" />
+    <Content Include="Plugins\eLogin\default\style.css" />
+    <Content Include="Plugins\eMenu\default\images\leftbg.jpg" />
+    <Content Include="Plugins\eMenu\default\images\lmenu_bottom.jpg" />
+    <Content Include="Plugins\eMenu\default\images\lmenu_cur.jpg" />
+    <Content Include="Plugins\eMenu\default\images\lmenu_hover.jpg" />
+    <Content Include="Plugins\eMenu\default\images\pts.gif" />
+    <Content Include="Plugins\eMenu\default\images\pt_close.gif" />
+    <Content Include="Plugins\eMenu\default\images\pt_open.gif" />
+    <Content Include="Plugins\eMenu\default\style.css" />
+    <Content Include="Plugins\eMenu\mobile\css\images\left.png" />
+    <Content Include="Plugins\eMenu\mobile\css\images\right.png" />
+    <Content Include="Plugins\eMenu\mobile\css\images\xiala.png" />
+    <Content Include="Plugins\eMenu\mobile\css\style.css" />
+    <Content Include="Plugins\eMenu\mobile\index.html" />
+    <Content Include="Plugins\eMenu\mobile\js\jquery-sliding-menu.js" />
+    <Content Include="Plugins\eMenu\mobile\js\jquery.min.js" />
+    <Content Include="Plugins\ePager\default\index.html" />
+    <Content Include="Plugins\ePager\default\style.css" />
+    <Content Include="Plugins\ePager\images\btn_skip.gif" />
+    <Content Include="Plugins\ePager\miniUI.css" />
+    <Content Include="Plugins\ePanel\default\images\default_ico.gif" />
+    <Content Include="Plugins\ePanel\default\images\ePanel_bg.jpg" />
+    <Content Include="Plugins\ePanel\default\images\ePanel_ico.gif" />
+    <Content Include="Plugins\ePanel\default\images\search_ico.gif" />
+    <Content Include="Plugins\ePanel\default\index.html" />
+    <Content Include="Plugins\ePanel\default\style.css" />
+    <Content Include="Plugins\eSearchItem\default\images\close.gif" />
+    <Content Include="Plugins\eSearchItem\default\images\close_cur.gif" />
+    <Content Include="Plugins\eSearchItem\default\images\search1.gif" />
+    <Content Include="Plugins\eSearchItem\default\images\search2.gif" />
+    <Content Include="Plugins\eSearchItem\default\images\search3.gif" />
+    <Content Include="Plugins\eSearchItem\default\index.html" />
+    <Content Include="Plugins\eSearchItem\default\style.css" />
+    <Content Include="Plugins\eTab\default\images\tab.jpg" />
+    <Content Include="Plugins\eTab\default\images\tab_bg.jpg" />
+    <Content Include="Plugins\eTab\default\index.html" />
+    <Content Include="Plugins\eTab\default\style.css" />
+    <Content Include="Plugins\eTab\tab\images\background.jpg" />
+    <Content Include="Plugins\eTab\tab\index.html" />
+    <Content Include="Plugins\eTab\tab\style.css" />
+    <Content Include="Plugins\eTree\default\images\licur.gif" />
+    <Content Include="Plugins\eTree\default\images\minus.gif" />
+    <Content Include="Plugins\eTree\default\images\plus.gif" />
+    <Content Include="Plugins\eTree\default\style.css" />
+    <Content Include="Plugins\FillData.aspx" />
+    <Content Include="Plugins\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="Plugins\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="Plugins\FontIco.aspx" />
+    <Content Include="Plugins\fontico.txt" />
+    <Content Include="Plugins\layui226\css\layui.css" />
+    <Content Include="Plugins\layui226\css\layui.mobile.css" />
+    <Content Include="Plugins\layui226\css\modules\code.css" />
+    <Content Include="Plugins\layui226\css\modules\laydate\default\laydate.css" />
+    <Content Include="Plugins\layui226\css\modules\layer\default\icon-ext.png" />
+    <Content Include="Plugins\layui226\css\modules\layer\default\icon.png" />
+    <Content Include="Plugins\layui226\css\modules\layer\default\layer.css" />
+    <Content Include="Plugins\layui226\css\modules\layer\default\loading-0.gif" />
+    <Content Include="Plugins\layui226\css\modules\layer\default\loading-1.gif" />
+    <Content Include="Plugins\layui226\css\modules\layer\default\loading-2.gif" />
+    <Content Include="Plugins\layui226\images\face\0.gif" />
+    <Content Include="Plugins\layui226\images\face\1.gif" />
+    <Content Include="Plugins\layui226\images\face\10.gif" />
+    <Content Include="Plugins\layui226\images\face\11.gif" />
+    <Content Include="Plugins\layui226\images\face\12.gif" />
+    <Content Include="Plugins\layui226\images\face\13.gif" />
+    <Content Include="Plugins\layui226\images\face\14.gif" />
+    <Content Include="Plugins\layui226\images\face\15.gif" />
+    <Content Include="Plugins\layui226\images\face\16.gif" />
+    <Content Include="Plugins\layui226\images\face\17.gif" />
+    <Content Include="Plugins\layui226\images\face\18.gif" />
+    <Content Include="Plugins\layui226\images\face\19.gif" />
+    <Content Include="Plugins\layui226\images\face\2.gif" />
+    <Content Include="Plugins\layui226\images\face\20.gif" />
+    <Content Include="Plugins\layui226\images\face\21.gif" />
+    <Content Include="Plugins\layui226\images\face\22.gif" />
+    <Content Include="Plugins\layui226\images\face\23.gif" />
+    <Content Include="Plugins\layui226\images\face\24.gif" />
+    <Content Include="Plugins\layui226\images\face\25.gif" />
+    <Content Include="Plugins\layui226\images\face\26.gif" />
+    <Content Include="Plugins\layui226\images\face\27.gif" />
+    <Content Include="Plugins\layui226\images\face\28.gif" />
+    <Content Include="Plugins\layui226\images\face\29.gif" />
+    <Content Include="Plugins\layui226\images\face\3.gif" />
+    <Content Include="Plugins\layui226\images\face\30.gif" />
+    <Content Include="Plugins\layui226\images\face\31.gif" />
+    <Content Include="Plugins\layui226\images\face\32.gif" />
+    <Content Include="Plugins\layui226\images\face\33.gif" />
+    <Content Include="Plugins\layui226\images\face\34.gif" />
+    <Content Include="Plugins\layui226\images\face\35.gif" />
+    <Content Include="Plugins\layui226\images\face\36.gif" />
+    <Content Include="Plugins\layui226\images\face\37.gif" />
+    <Content Include="Plugins\layui226\images\face\38.gif" />
+    <Content Include="Plugins\layui226\images\face\39.gif" />
+    <Content Include="Plugins\layui226\images\face\4.gif" />
+    <Content Include="Plugins\layui226\images\face\40.gif" />
+    <Content Include="Plugins\layui226\images\face\41.gif" />
+    <Content Include="Plugins\layui226\images\face\42.gif" />
+    <Content Include="Plugins\layui226\images\face\43.gif" />
+    <Content Include="Plugins\layui226\images\face\44.gif" />
+    <Content Include="Plugins\layui226\images\face\45.gif" />
+    <Content Include="Plugins\layui226\images\face\46.gif" />
+    <Content Include="Plugins\layui226\images\face\47.gif" />
+    <Content Include="Plugins\layui226\images\face\48.gif" />
+    <Content Include="Plugins\layui226\images\face\49.gif" />
+    <Content Include="Plugins\layui226\images\face\5.gif" />
+    <Content Include="Plugins\layui226\images\face\50.gif" />
+    <Content Include="Plugins\layui226\images\face\51.gif" />
+    <Content Include="Plugins\layui226\images\face\52.gif" />
+    <Content Include="Plugins\layui226\images\face\53.gif" />
+    <Content Include="Plugins\layui226\images\face\54.gif" />
+    <Content Include="Plugins\layui226\images\face\55.gif" />
+    <Content Include="Plugins\layui226\images\face\56.gif" />
+    <Content Include="Plugins\layui226\images\face\57.gif" />
+    <Content Include="Plugins\layui226\images\face\58.gif" />
+    <Content Include="Plugins\layui226\images\face\59.gif" />
+    <Content Include="Plugins\layui226\images\face\6.gif" />
+    <Content Include="Plugins\layui226\images\face\60.gif" />
+    <Content Include="Plugins\layui226\images\face\61.gif" />
+    <Content Include="Plugins\layui226\images\face\62.gif" />
+    <Content Include="Plugins\layui226\images\face\63.gif" />
+    <Content Include="Plugins\layui226\images\face\64.gif" />
+    <Content Include="Plugins\layui226\images\face\65.gif" />
+    <Content Include="Plugins\layui226\images\face\66.gif" />
+    <Content Include="Plugins\layui226\images\face\67.gif" />
+    <Content Include="Plugins\layui226\images\face\68.gif" />
+    <Content Include="Plugins\layui226\images\face\69.gif" />
+    <Content Include="Plugins\layui226\images\face\7.gif" />
+    <Content Include="Plugins\layui226\images\face\70.gif" />
+    <Content Include="Plugins\layui226\images\face\71.gif" />
+    <Content Include="Plugins\layui226\images\face\8.gif" />
+    <Content Include="Plugins\layui226\images\face\9.gif" />
+    <Content Include="Plugins\layui226\layui.all.js" />
+    <Content Include="Plugins\layui226\layui.js" />
+    <Content Include="Plugins\layui226\lay\modules\carousel.js" />
+    <Content Include="Plugins\layui226\lay\modules\code.js" />
+    <Content Include="Plugins\layui226\lay\modules\element.js" />
+    <Content Include="Plugins\layui226\lay\modules\flow.js" />
+    <Content Include="Plugins\layui226\lay\modules\form.js" />
+    <Content Include="Plugins\layui226\lay\modules\jquery.js" />
+    <Content Include="Plugins\layui226\lay\modules\laydate.js" />
+    <Content Include="Plugins\layui226\lay\modules\layedit.js" />
+    <Content Include="Plugins\layui226\lay\modules\layer.js" />
+    <Content Include="Plugins\layui226\lay\modules\laypage.js" />
+    <Content Include="Plugins\layui226\lay\modules\laytpl.js" />
+    <Content Include="Plugins\layui226\lay\modules\mobile.js" />
+    <Content Include="Plugins\layui226\lay\modules\table.js" />
+    <Content Include="Plugins\layui226\lay\modules\tree.js" />
+    <Content Include="Plugins\layui226\lay\modules\upload.js" />
+    <Content Include="Plugins\layui226\lay\modules\util.js" />
+    <Content Include="Plugins\Power.aspx" />
+    <Content Include="Plugins\ProUpload.aspx" />
+    <Content Include="Plugins\raty\images\cus-half.png" />
+    <Content Include="Plugins\raty\images\cus-off.png" />
+    <Content Include="Plugins\raty\images\cus-on.png" />
+    <Content Include="Plugins\raty\images\cusa-half.png" />
+    <Content Include="Plugins\raty\images\cusa-off.png" />
+    <Content Include="Plugins\raty\images\cusa-on.png" />
+    <Content Include="Plugins\raty\images\star-half-big.png" />
+    <Content Include="Plugins\raty\images\star-half.png" />
+    <Content Include="Plugins\raty\images\star-off-big.png" />
+    <Content Include="Plugins\raty\images\star-off.png" />
+    <Content Include="Plugins\raty\images\star-on-big.png" />
+    <Content Include="Plugins\raty\images\star-on.png" />
+    <Content Include="Plugins\raty\index.html" />
+    <Content Include="Plugins\raty\jquery.min.js" />
+    <Content Include="Plugins\raty\jquery.raty.min.js" />
+    <Content Include="Plugins\RndPic.aspx" />
+    <Content Include="Plugins\selInput\images\data.png" />
+    <Content Include="Plugins\selInput\index.html" />
+    <Content Include="Plugins\selInput\selInput.js" />
+    <Content Include="Plugins\selInput\style.css" />
+    <Content Include="Scripts\common.js" />
+    <Content Include="Scripts\eketeam.js" />
+    <Content Include="Scripts\Init.js" />
+    <Content Include="Scripts\jquery-1.7.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
+    <Content Include="Scripts\jquery.flexslider-min.js" />
+    <Content Include="systemhui\Default.aspx" />
+    <Content Include="systemhui\Dictionaries.aspx" />
+    <Content Include="systemhui\Home.aspx" />
+    <Content Include="systemhui\lib\DD_belatedPNG_0.0.8a-min.js" />
+    <Content Include="systemhui\lib\html5shiv.js" />
+    <Content Include="systemhui\lib\Hui-iconfont\1.0.8\demo.html" />
+    <Content Include="systemhui\lib\Hui-iconfont\1.0.8\iconfont.css" />
+    <Content Include="systemhui\lib\Hui-iconfont\1.0.8\iconfont.min.css" />
+    <Content Include="systemhui\lib\jquery.contextmenu\jquery.contextmenu.r2.js" />
+    <Content Include="systemhui\lib\jquery\1.9.1\jquery.js" />
+    <Content Include="systemhui\lib\jquery\1.9.1\jquery.min.js" />
+    <Content Include="systemhui\lib\respond.min.js" />
+    <Content Include="systemhui\Login.aspx" />
+    <Content Include="systemhui\LoginOut.aspx" />
+    <Content Include="systemhui\Menu.ascx" />
+    <Content Include="systemhui\Model.aspx" />
+    <Content Include="systemhui\Organizationals.aspx" />
+    <Content Include="systemhui\PartMore.aspx" />
+    <Content Include="systemhui\PartOne.aspx" />
+    <Content Include="systemhui\static\h-ui.admin\css\H-ui.admin.css" />
+    <Content Include="systemhui\static\h-ui.admin\css\H-ui.login.css" />
+    <Content Include="systemhui\static\h-ui.admin\css\style.css" />
+    <Content Include="systemhui\static\h-ui.admin\images\acrossTab\acrossTab-2 - 副本.png" />
+    <Content Include="systemhui\static\h-ui.admin\images\acrossTab\acrossTab-2.png" />
+    <Content Include="systemhui\static\h-ui.admin\images\admin-login-bg.jpg" />
+    <Content Include="systemhui\static\h-ui.admin\images\admin-loginform-bg.png" />
+    <Content Include="systemhui\static\h-ui.admin\images\cn.gif" />
+    <Content Include="systemhui\static\h-ui.admin\images\loading.gif" />
+    <Content Include="systemhui\static\h-ui.admin\images\logo.png" />
+    <Content Include="systemhui\static\h-ui.admin\images\um.gif" />
+    <Content Include="systemhui\static\h-ui.admin\js\de_DE.txt" />
+    <Content Include="systemhui\static\h-ui.admin\js\H-ui.admin.js" />
+    <Content Include="systemhui\static\h-ui.admin\skin\blue\acrossTab-bg.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\blue\acrossTab.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\blue\icon_arrow.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\blue\skin.css" />
+    <Content Include="systemhui\static\h-ui.admin\skin\default\acrossTab-bg.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\default\acrossTab.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\default\icon_arrow.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\default\skin.css" />
+    <Content Include="systemhui\static\h-ui.admin\skin\green\acrossTab-bg.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\green\acrossTab.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\green\icon_arrow.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\green\skin.css" />
+    <Content Include="systemhui\static\h-ui.admin\skin\orange\acrossTab-bg.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\orange\acrossTab.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\orange\icon_arrow.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\orange\skin.css" />
+    <Content Include="systemhui\static\h-ui.admin\skin\red\acrossTab-bg.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\red\acrossTab.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\red\icon_arrow.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\red\skin.css" />
+    <Content Include="systemhui\static\h-ui.admin\skin\yellow\acrossTab-bg.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\yellow\acrossTab.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\yellow\icon_arrow.png" />
+    <Content Include="systemhui\static\h-ui.admin\skin\yellow\skin.css" />
+    <Content Include="systemhui\static\h-ui\css\H-ui.css" />
+    <Content Include="systemhui\static\h-ui\css\H-ui.ie.css" />
+    <Content Include="systemhui\static\h-ui\css\H-ui.min.css" />
+    <Content Include="systemhui\static\h-ui\css\H-ui.reset.css" />
+    <Content Include="systemhui\static\h-ui\images\acrossTab\acrossTab-bg.png" />
+    <Content Include="systemhui\static\h-ui\images\acrossTab\acrossTab-close.png" />
+    <Content Include="systemhui\static\h-ui\images\acrossTab\acrossTab.png" />
+    <Content Include="systemhui\static\h-ui\images\dataTable\sort_asc.png" />
+    <Content Include="systemhui\static\h-ui\images\dataTable\sort_both.png" />
+    <Content Include="systemhui\static\h-ui\images\dataTable\sort_desc.png" />
+    <Content Include="systemhui\static\h-ui\images\dropDown\icon-jt.png" />
+    <Content Include="systemhui\static\h-ui\images\face\201.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\202.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\203.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\204.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\205.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\206.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\207.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\208.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\209.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\210.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\0.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\1.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\10.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\100.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\101.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\102.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\103.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\104.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\105.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\106.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\11.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\12.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\13.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\14.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\15.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\16.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\18.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\19.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\2.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\20.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\21.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\22.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\23.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\24.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\25.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\26.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\27.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\28.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\29.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\3.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\30.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\31.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\32.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\33.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\34.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\35.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\36.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\37.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\38.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\39.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\4.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\40.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\41.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\42.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\43.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\44.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\45.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\46.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\47.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\48.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\49.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\5.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\50.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\51.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\52.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\53.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\54.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\55.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\56.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\57.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\58.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\59.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\6.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\60.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\61.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\62.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\63.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\64.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\65.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\66.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\67.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\68.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\69.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\7.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\70.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\71.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\72.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\73.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\74.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\75.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\76.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\77.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\78.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\79.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\8.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\80.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\81.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\82.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\83.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\84.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\85.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\86.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\87.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\88.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\89.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\9.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\90.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\91.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\92.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\93.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\94.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\95.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\96.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\97.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\98.gif" />
+    <Content Include="systemhui\static\h-ui\images\face\QQ\99.gif" />
+    <Content Include="systemhui\static\h-ui\images\Hui-tags\empty.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\aero%402x.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\aero.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\blue%402x.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\blue.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\green%402x.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\green.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\grey%402x.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\grey.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\minimal%402x.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\minimal.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\orange%402x.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\orange.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\pink%402x.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\pink.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\purple%402x.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\purple.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\red%402x.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\red.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\yellow%402x.png" />
+    <Content Include="systemhui\static\h-ui\images\iCheck\yellow.png" />
+    <Content Include="systemhui\static\h-ui\images\iconpic-arrow.png" />
+    <Content Include="systemhui\static\h-ui\images\jselect\iconpic-arrow-down2.png" />
+    <Content Include="systemhui\static\h-ui\images\loading\loading-b.gif" />
+    <Content Include="systemhui\static\h-ui\images\loading\loading-s.gif" />
+    <Content Include="systemhui\static\h-ui\images\rollpic\unslider-arrow.png" />
+    <Content Include="systemhui\static\h-ui\images\star\iconpic-star-S-default.png" />
+    <Content Include="systemhui\static\h-ui\images\star\iconpic-star-S.png" />
+    <Content Include="systemhui\static\h-ui\images\steps\step_arrow-active.png" />
+    <Content Include="systemhui\static\h-ui\images\steps\step_arrow.png" />
+    <Content Include="systemhui\static\h-ui\images\steps\step_bg-active.png" />
+    <Content Include="systemhui\static\h-ui\images\steps\step_bg.png" />
+    <Content Include="systemhui\static\h-ui\images\ucnter\avatar-default-S.gif" />
+    <Content Include="systemhui\static\h-ui\images\ucnter\avatar-default.jpg" />
+    <Content Include="systemhui\static\h-ui\images\ucnter\avatar.png" />
+    <Content Include="systemhui\static\h-ui\images\ucnter\noavatar_small.gif" />
+    <Content Include="systemhui\static\h-ui\images\validform\iconpic-error.png" />
+    <Content Include="systemhui\static\h-ui\images\validform\iconpic-right.png" />
+    <Content Include="systemhui\static\h-ui\images\validform\iconpic-warning.png" />
+    <Content Include="systemhui\static\h-ui\images\verticalTab\tabNav-active.png" />
+    <Content Include="systemhui\static\h-ui\images\verticalTab\tabNav-hover.png" />
+    <Content Include="systemhui\static\h-ui\images\verticalTab\tabNav.png" />
+    <Content Include="systemhui\static\h-ui\images\verticalTab\tabNav_right-active.png" />
+    <Content Include="systemhui\static\h-ui\images\verticalTab\tabNav_right-hover.png" />
+    <Content Include="systemhui\static\h-ui\images\verticalTab\tabNav_right.png" />
+    <Content Include="systemhui\static\h-ui\images\verticalTab\tab_bg.png" />
+    <Content Include="systemhui\static\h-ui\js\H-ui.js" />
+    <Content Include="systemhui\static\h-ui\js\H-ui.min.js" />
+    <Content Include="systemhui\style.css" />
+    <Content Include="system\Accessorys.aspx" />
+    <Content Include="system\CustomModel.aspx" />
+    <Content Include="system\CustomModelSimple.aspx" />
+    <Content Include="system\Default.aspx" />
+    <Content Include="system\Dictionaries.aspx" />
+    <Content Include="system\Login.aspx" />
+    <Content Include="system\LoginOut.aspx" />
+    <Content Include="system\Model.aspx" />
+    <Content Include="system\ModifyPass.aspx" />
+    <Content Include="system\Organizationals.aspx" />
+    <Content Include="system\PartMore.aspx" />
+    <Content Include="system\PartOne.aspx" />
+    <Content Include="system\style.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WebAPI\getToKen.aspx" />
+    <Content Include="WebAPI\Model.aspx" />
+    <Content Include="WebAPI\Test.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="eWebService.asmx.cs">
+      <DependentUpon>eWebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Examples\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\easyUIDataGrid.aspx.cs">
+      <DependentUpon>easyUIDataGrid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\easyUIDataGrid.aspx.designer.cs">
+      <DependentUpon>easyUIDataGrid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\easyUIDataGridSearch.aspx.cs">
+      <DependentUpon>easyUIDataGridSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\easyUIDataGridSearch.aspx.designer.cs">
+      <DependentUpon>easyUIDataGridSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eClient.aspx.cs">
+      <DependentUpon>eClient.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eClient.aspx.designer.cs">
+      <DependentUpon>eClient.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eDataContent.aspx.cs">
+      <DependentUpon>eDataContent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eDataContent.aspx.designer.cs">
+      <DependentUpon>eDataContent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eDataTable.aspx.cs">
+      <DependentUpon>eDataTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eDataTable.aspx.designer.cs">
+      <DependentUpon>eDataTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eDataView.aspx.cs">
+      <DependentUpon>eDataView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eDataView.aspx.designer.cs">
+      <DependentUpon>eDataView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eForm.aspx.cs">
+      <DependentUpon>eForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eForm.aspx.designer.cs">
+      <DependentUpon>eForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eFormControl.aspx.cs">
+      <DependentUpon>eFormControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eFormControl.aspx.designer.cs">
+      <DependentUpon>eFormControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eJson.aspx.cs">
+      <DependentUpon>eJson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eJson.aspx.designer.cs">
+      <DependentUpon>eJson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eList.aspx.cs">
+      <DependentUpon>eList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eList.aspx.designer.cs">
+      <DependentUpon>eList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eListControl.aspx.cs">
+      <DependentUpon>eListControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eListControl.aspx.designer.cs">
+      <DependentUpon>eListControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eOleDB.aspx.cs">
+      <DependentUpon>eOleDB.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eOleDB.aspx.designer.cs">
+      <DependentUpon>eOleDB.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eOrderby.aspx.cs">
+      <DependentUpon>eOrderby.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eOrderby.aspx.designer.cs">
+      <DependentUpon>eOrderby.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\ePicture.aspx.cs">
+      <DependentUpon>ePicture.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\ePicture.aspx.designer.cs">
+      <DependentUpon>ePicture.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eSearchControl.aspx.cs">
+      <DependentUpon>eSearchControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eSearchControl.aspx.designer.cs">
+      <DependentUpon>eSearchControl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eTable.aspx.cs">
+      <DependentUpon>eTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eTable.aspx.designer.cs">
+      <DependentUpon>eTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\eUser.aspx.cs">
+      <DependentUpon>eUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\eUser.aspx.designer.cs">
+      <DependentUpon>eUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\LoadAction.aspx.cs">
+      <DependentUpon>LoadAction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\LoadAction.aspx.designer.cs">
+      <DependentUpon>LoadAction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Main.Master.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\Main.Master.designer.cs">
+      <DependentUpon>Main.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Examples\Multiple.aspx.cs">
+      <DependentUpon>Multiple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Examples\Multiple.aspx.designer.cs">
+      <DependentUpon>Multiple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\AllDomain.aspx.cs">
+      <DependentUpon>AllDomain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\AllDomain.aspx.designer.cs">
+      <DependentUpon>AllDomain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Cache.aspx.cs">
+      <DependentUpon>Cache.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Cache.aspx.designer.cs">
+      <DependentUpon>Cache.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\createModel.aspx.cs">
+      <DependentUpon>createModel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\createModel.aspx.designer.cs">
+      <DependentUpon>createModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\createTable.aspx.cs">
+      <DependentUpon>createTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\createTable.aspx.designer.cs">
+      <DependentUpon>createTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\DataContents.aspx.cs">
+      <DependentUpon>DataContents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\DataContents.aspx.designer.cs">
+      <DependentUpon>DataContents.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\DataViews.aspx.cs">
+      <DependentUpon>DataViews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\DataViews.aspx.designer.cs">
+      <DependentUpon>DataViews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\getFrameSQL.aspx.cs">
+      <DependentUpon>getFrameSQL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\getFrameSQL.aspx.designer.cs">
+      <DependentUpon>getFrameSQL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\LoginOut.aspx.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\LoginOut.aspx.designer.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Menus.aspx.cs">
+      <DependentUpon>Menus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Menus.aspx.designer.cs">
+      <DependentUpon>Menus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelExport.aspx.cs">
+      <DependentUpon>ModelExport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelExport.aspx.designer.cs">
+      <DependentUpon>ModelExport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelImport.aspx.cs">
+      <DependentUpon>ModelImport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelImport.aspx.designer.cs">
+      <DependentUpon>ModelImport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems.aspx.cs">
+      <DependentUpon>ModelItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems.aspx.designer.cs">
+      <DependentUpon>ModelItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Action.aspx.cs">
+      <DependentUpon>ModelItems_Action.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Action.aspx.designer.cs">
+      <DependentUpon>ModelItems_Action.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Basic.aspx.cs">
+      <DependentUpon>ModelItems_Basic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Basic.aspx.designer.cs">
+      <DependentUpon>ModelItems_Basic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Client.aspx.cs">
+      <DependentUpon>ModelItems_Client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Client.aspx.designer.cs">
+      <DependentUpon>ModelItems_Client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Columns.aspx.cs">
+      <DependentUpon>ModelItems_Columns.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Columns.aspx.designer.cs">
+      <DependentUpon>ModelItems_Columns.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Data.aspx.cs">
+      <DependentUpon>ModelItems_Data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Data.aspx.designer.cs">
+      <DependentUpon>ModelItems_Data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Export.aspx.cs">
+      <DependentUpon>ModelItems_Export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Export.aspx.designer.cs">
+      <DependentUpon>ModelItems_Export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems_FillData.aspx.cs">
+      <DependentUpon>ModelItems_FillData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems_FillData.aspx.designer.cs">
+      <DependentUpon>ModelItems_FillData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Js.aspx.cs">
+      <DependentUpon>ModelItems_Js.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Js.aspx.designer.cs">
+      <DependentUpon>ModelItems_Js.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Layout.aspx.cs">
+      <DependentUpon>ModelItems_Layout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Layout.aspx.designer.cs">
+      <DependentUpon>ModelItems_Layout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems_List.aspx.cs">
+      <DependentUpon>ModelItems_List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems_List.aspx.designer.cs">
+      <DependentUpon>ModelItems_List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Search.aspx.cs">
+      <DependentUpon>ModelItems_Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems_Search.aspx.designer.cs">
+      <DependentUpon>ModelItems_Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ModelItems_WebAPI.aspx.cs">
+      <DependentUpon>ModelItems_WebAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ModelItems_WebAPI.aspx.designer.cs">
+      <DependentUpon>ModelItems_WebAPI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Models.aspx.cs">
+      <DependentUpon>Models.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Models.aspx.designer.cs">
+      <DependentUpon>Models.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Roles.aspx.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Roles.aspx.designer.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\TableInfo.aspx.cs">
+      <DependentUpon>TableInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\TableInfo.aspx.designer.cs">
+      <DependentUpon>TableInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\TableInfo_Export.aspx.cs">
+      <DependentUpon>TableInfo_Export.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\TableInfo_Export.aspx.designer.cs">
+      <DependentUpon>TableInfo_Export.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\ToKens.aspx.cs">
+      <DependentUpon>ToKens.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\ToKens.aspx.designer.cs">
+      <DependentUpon>ToKens.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\huiMain.Master.cs">
+      <DependentUpon>huiMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\huiMain.Master.designer.cs">
+      <DependentUpon>huiMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\manageMain.Master.cs">
+      <DependentUpon>manageMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\manageMain.Master.designer.cs">
+      <DependentUpon>manageMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\manageMenu.ascx.cs">
+      <DependentUpon>manageMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\manageMenu.ascx.designer.cs">
+      <DependentUpon>manageMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\systemMain.Master.cs">
+      <DependentUpon>systemMain.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\systemMain.Master.designer.cs">
+      <DependentUpon>systemMain.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\systemMainNone.Master.cs">
+      <DependentUpon>systemMainNone.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\systemMainNone.Master.designer.cs">
+      <DependentUpon>systemMainNone.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Master\systemMenu.ascx.cs">
+      <DependentUpon>systemMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\systemMenu.ascx.designer.cs">
+      <DependentUpon>systemMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\LoginOut.aspx.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\LoginOut.aspx.designer.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\Model.aspx.cs">
+      <DependentUpon>Model.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\Model.aspx.designer.cs">
+      <DependentUpon>Model.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Mobile\ModifyPass.aspx.cs">
+      <DependentUpon>ModifyPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mobile\ModifyPass.aspx.designer.cs">
+      <DependentUpon>ModifyPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\FillData.aspx.cs">
+      <DependentUpon>FillData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plugins\FillData.aspx.designer.cs">
+      <DependentUpon>FillData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\FontIco.aspx.cs">
+      <DependentUpon>FontIco.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plugins\FontIco.aspx.designer.cs">
+      <DependentUpon>FontIco.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\Power.aspx.cs">
+      <DependentUpon>Power.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plugins\Power.aspx.designer.cs">
+      <DependentUpon>Power.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\ProUpload.aspx.cs">
+      <DependentUpon>ProUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plugins\ProUpload.aspx.designer.cs">
+      <DependentUpon>ProUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Plugins\RndPic.aspx.cs">
+      <DependentUpon>RndPic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Plugins\RndPic.aspx.designer.cs">
+      <DependentUpon>RndPic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="systemhui\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="systemhui\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="systemhui\Dictionaries.aspx.cs">
+      <DependentUpon>Dictionaries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="systemhui\Dictionaries.aspx.designer.cs">
+      <DependentUpon>Dictionaries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="systemhui\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="systemhui\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="systemhui\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="systemhui\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="systemhui\LoginOut.aspx.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="systemhui\LoginOut.aspx.designer.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="systemhui\Menu.ascx.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="systemhui\Menu.ascx.designer.cs">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="systemhui\Model.aspx.cs">
+      <DependentUpon>Model.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="systemhui\Model.aspx.designer.cs">
+      <DependentUpon>Model.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="systemhui\Organizationals.aspx.cs">
+      <DependentUpon>Organizationals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="systemhui\Organizationals.aspx.designer.cs">
+      <DependentUpon>Organizationals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="systemhui\PartMore.aspx.cs">
+      <DependentUpon>PartMore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="systemhui\PartMore.aspx.designer.cs">
+      <DependentUpon>PartMore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="systemhui\PartOne.aspx.cs">
+      <DependentUpon>PartOne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="systemhui\PartOne.aspx.designer.cs">
+      <DependentUpon>PartOne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\Accessorys.aspx.cs">
+      <DependentUpon>Accessorys.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\Accessorys.aspx.designer.cs">
+      <DependentUpon>Accessorys.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\CustomModel.aspx.cs">
+      <DependentUpon>CustomModel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\CustomModel.aspx.designer.cs">
+      <DependentUpon>CustomModel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\CustomModelSimple.aspx.cs">
+      <DependentUpon>CustomModelSimple.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\CustomModelSimple.aspx.designer.cs">
+      <DependentUpon>CustomModelSimple.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\Dictionaries.aspx.cs">
+      <DependentUpon>Dictionaries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\Dictionaries.aspx.designer.cs">
+      <DependentUpon>Dictionaries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\LoginOut.aspx.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\LoginOut.aspx.designer.cs">
+      <DependentUpon>LoginOut.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\Model.aspx.cs">
+      <DependentUpon>Model.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\Model.aspx.designer.cs">
+      <DependentUpon>Model.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\ModifyPass.aspx.cs">
+      <DependentUpon>ModifyPass.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\ModifyPass.aspx.designer.cs">
+      <DependentUpon>ModifyPass.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\Organizationals.aspx.cs">
+      <DependentUpon>Organizationals.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\Organizationals.aspx.designer.cs">
+      <DependentUpon>Organizationals.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\PartMore.aspx.cs">
+      <DependentUpon>PartMore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\PartMore.aspx.designer.cs">
+      <DependentUpon>PartMore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="system\PartOne.aspx.cs">
+      <DependentUpon>PartOne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="system\PartOne.aspx.designer.cs">
+      <DependentUpon>PartOne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebAPI\getToKen.aspx.cs">
+      <DependentUpon>getToKen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebAPI\getToKen.aspx.designer.cs">
+      <DependentUpon>getToKen.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebAPI\Model.aspx.cs">
+      <DependentUpon>Model.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebAPI\Model.aspx.designer.cs">
+      <DependentUpon>Model.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebAPI\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebAPI\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Examples\Main.Master" />
+    <Content Include="Plugins\getData.ashx" />
+    <Content Include="Master\huiMain.Master" />
+    <Content Include="Master\systemMain.Master" />
+    <Content Include="Master\systemMainNone.Master" />
+    <Content Include="Master\manageMain.Master" />
+    <Content Include="Plugins\kindeditor351\flash.ashx" />
+    <Content Include="Plugins\kindeditor351\image.ashx" />
+    <Content Include="Plugins\kindeditor351\media.ashx" />
+    <Content Include="Plugins\kindeditor351\uploadaccessory.ashx" />
+    <Content Include="Plugins\layui226\font\iconfont.eot" />
+    <Content Include="Plugins\layui226\font\iconfont.svg" />
+    <Content Include="Plugins\layui226\font\iconfont.ttf" />
+    <Content Include="Plugins\layui226\font\iconfont.woff" />
+    <Content Include="Plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="Plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="Plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="Plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Plugins\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\core.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\list.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\path.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="Plugins\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="Properties\PublishProfiles\aspx.pubxml" />
+    <Content Include="systemhui\lib\Hui-iconfont\1.0.8\iconfont.eot" />
+    <Content Include="systemhui\lib\Hui-iconfont\1.0.8\iconfont.svg" />
+    <Content Include="systemhui\lib\Hui-iconfont\1.0.8\iconfont.ttf" />
+    <Content Include="systemhui\lib\Hui-iconfont\1.0.8\iconfont.woff" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1097/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

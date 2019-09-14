@@ -1,0 +1,16 @@
+﻿.ePanel,.ePanel > dd{ border:solid #cccccc;border-radius:3px;}
+
+.ePanel{border-width:1px;display:block;margin:0px 0px 8px 0px;}
+.ePanel > dt{ height:27px;line-height:29px;background-color:#f2f2f2;back4ground: url(images/ePanel_bg.jpg) repeat-x left top; margin:0px;padding:0px; overflow:hidden;font-family:"宋体";}
+.ePanel > dt h1{font-we4ight:normal;padding:0px;margin:0px;font-size:12px;padding-left:8px;color:#0E2D5F; cursor:pointer;height:27px;line-height:27px;overflow:hidden; }
+.ePanel > dt h1 a{padding:0px;display:inline-block;float:right;margin-right:10px;margin-top:6px;width:16px;height:16px;background-image: url(images/ePanel_ico.gif);}
+
+.ePanel > dt h1 a:hover{background-position:0px -16px;}
+.ePanel > dt h1 a.cur{background-position:0px -32px;}
+.ePanel > dt h1 a.cur:hover{background-position:0px -48px;}
+.ePanel > dd{margin:0px;border-width:1px 0px 0px 0px;background-col3or:#E6F3FF;padding:8px;background-color:#ffffff;}
+
+
+
+.ePanel > dt h1{padding-left:28px;background:url(images/default_ico.gif) no-repeat 6px 6px;}
+.ePanel > dt h1.search{padding-left:30px;background:url(images/search_ico.gif) no-repeat 8px 6px;}

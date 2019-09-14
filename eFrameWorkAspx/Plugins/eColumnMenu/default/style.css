@@ -1,0 +1,14 @@
+﻿.eDataTable thead a.tbmenu{float:right; backgro3und-color:#ff0000;margin-right:3px;display:inline-block;width:20px;
+
+
+background-image:url(images/tb_menu.gif);
+background-repeat:no-repeat; background-position:0px center;
+border:0px solid #ff0000;
+
+}
+.eDataTable thead a.tbmenu:hover{background-position:-22px center;}
+
+.column_menu{position:absolute; border:1px solid #cccccc; background-color:#ffffff;top:200px;left:280px;padding:6px; min-width:120px;box-shadow:0 0 5px rgba(0,0,0,0.2);border-radius:3px;}
+.column_menu a{font-size:12px;height:23px;line-height:25px; background-color:#ffffff;display:block;padding:0px 10px 0px 20px;border:1px solid #ffffff;color:#222222;}
+.column_menu a.cur{ background:#FFFFFF url(images/write.gif) no-repeat 5px center;}
+.column_menu a:hover{border:1px solid #cccccc;background-color:#f2f2f2;}

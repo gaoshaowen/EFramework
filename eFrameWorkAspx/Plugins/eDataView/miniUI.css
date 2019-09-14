@@ -1,0 +1,17 @@
+﻿.eDataViewB {border:solid #cccccc; border-width:1px 0px 0px 1px;table-layout:fixed; border-collapse:separate;margin:0px 0px 8px 0px;border-radius:3px;}
+
+.eDataViewB td.title,.eDataViewB td.content{border:1px solid #cccccc; border-top-color:#ffffff; border-left-color:#ffffff;padding-top:6px;padding-bottom:8px;font-family:"宋体";font-size:12px; min-height:22px;line-height:19px;}
+
+.eDataViewB td.title{padding-right:3px; text-align:right; background-color:#F0F0F0; font-weight:bold;color:#505050;width:150px;font-family:"Tahoma";}
+.eDataViewB td.title font,.eDataViewB td.title a{ font-weight:normal;}
+.eDataViewB td.title ins{font-weight:normal; text-decoration:none;color:#ff0000;font-family:"宋体"; font-size:12px;padding-left:5px;padding-right:5px;}
+
+.eDataViewB td.content{text-align:left;background-color:#FFFFFF;padding-left:5px;padding-right:6px;}
+.eDataViewB td.content img{max-width:100%;}
+
+
+
+
+.eDataView td,.eDataView  th{ padding:6px; border:0px; border:1px solid #f6f6f6; }
+.eDataView td.title{text-align:right;padding-right:0px;}
+.eDataView td.title ins{font-weight:normal; text-decoration:none;color:#ff0000;font-family:"宋体"; f3ont-size:12px;padding-left:5px;padding-right:5px;}
