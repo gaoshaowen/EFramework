@@ -15,5 +15,4 @@ eFrameWork为公开框架,所以默认帐号、密码、目录结构等信息也
 9.框架将不断完善更新,敬请关注frame.eketeam.com
 10.下载框架请到官网frame.eketeam.com进行，同版本有些小BUG会在官网保持最新。
 
-如果在使用过程中有问题或有好的建议欢迎与我们联系。
-frame.eketeam.com
+http://frame.eketeam.com/
